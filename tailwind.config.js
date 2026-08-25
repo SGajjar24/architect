@@ -5,23 +5,26 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./data/**/*.{js,ts,jsx,tsx}",
+    "./context/**/*.{js,ts,jsx,tsx}",
     "./*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
         sans: ['Outfit', 'sans-serif'],
-        serif: ['Syne', 'sans-serif'], 
+        serif: ['Syne', 'sans-serif'],
+        mono: ['Space Grotesk', 'monospace'],
       },
       colors: {
-        primary: '#0f172a', // Slate 900
-        secondary: '#b45309', // Amber 700
-        accent: '#0ea5e9', // Sky 500 (for AI)
-        gold: '#D4AF37', // Premium accent
-        stone: {
-          50: '#fafaf9',
-          100: '#f5f5f4',
-          900: '#1c1917',
+        primary: '#030712', // Obsidian Slate
+        secondary: '#d97706', // Amber 600
+        accent: '#38bdf8', // Sky 400
+        gold: '#D4AF37', // Champagne Gold
+        blueprint: {
+          50: '#f0f9ff',
+          500: '#0ea5e9',
+          900: '#0c4a6e',
+          950: '#082f49',
         }
       },
       animation: {
@@ -30,7 +33,6 @@ export default {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
         'slide-up': 'slideUp 0.5s ease-out forwards',
-        'hero-zoom': 'heroZoom 20s linear infinite alternate',
       },
       keyframes: {
         fadeInUp: {
@@ -49,13 +51,6 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
-        heroZoom: {
-          '0%': { transform: 'scale(1)' },
-          '100%': { transform: 'scale(1.15)' },
-        }
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     },
   },

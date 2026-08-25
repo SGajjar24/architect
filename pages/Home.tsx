@@ -1,283 +1,164 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  ArrowRight, Activity, Compass, Shield, LayoutTemplate, 
-  HardHat, MoveRight, BrainCircuit, Sparkles, ArrowDown, PenTool,
-  CheckCircle2, ExternalLink, Building, Award, MapPin
-} from 'lucide-react';
-import Button from '../components/Button';
-import Reveal from '../components/Reveal';
+import { useStudio } from '../context/StudioContext';
+import ThreeArchitectureScene from '../components/ThreeArchitectureScene';
 import Card3D from '../components/Card3D';
-import { IMAGES, SERVICES_LIST } from '../constants';
+import Reveal from '../components/Reveal';
 import { ALL_VERIFIED_PROJECTS } from '../data/projectsData';
+import { 
+  ArrowRight, 
+  ArrowUpRight, 
+  ShieldCheck, 
+  Building2, 
+  MapPin, 
+  Award, 
+  Sparkles, 
+  Compass, 
+  CheckCircle2, 
+  Layers, 
+  Grid 
+} from 'lucide-react';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current) {
-        const scrolled = window.scrollY;
-        if (scrolled < 1000) {
-          heroRef.current.style.transform = `translate3d(0, ${scrolled * 0.4}px, 0)`;
-        }
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const featuredProjects = ALL_VERIFIED_PROJECTS.slice(0, 4);
+  const { isBlueprintMode } = useStudio();
+  const flagshipProjects = ALL_VERIFIED_PROJECTS.slice(0, 4);
 
   return (
-    <div className="flex flex-col w-full overflow-x-hidden bg-stone-50">
+    <div className={`min-h-screen ${isBlueprintMode ? 'bg-slate-950 text-cyan-50' : 'bg-slate-950 text-slate-100'}`}>
       
-      {/* 1. HERO SECTION - Cinematic & Full Screen */}
-      <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-slate-950">
-        {/* Parallax Background */}
-        <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none overflow-hidden">
-           <div 
-             ref={heroRef}
-             className="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform"
-           >
-             <img 
-                src={IMAGES.HERO_ARCH} 
-                alt="Luxury Architecture Vastu" 
-                className="w-full h-full object-cover opacity-50 mix-blend-overlay animate-hero-zoom"
-                loading="eager"
-             />
-           </div>
-           
-           {/* Ambient Glows */}
-           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-amber-500/10 blur-[140px] rounded-full pointer-events-none" />
-           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/70 to-slate-950/90" />
-           <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-white via-white/40 to-transparent" />
+      {/* 1. HERO SECTION WITH THREE.JS PARAMETRIC SCENE */}
+      <section className="relative h-screen min-h-[750px] flex items-center justify-center overflow-hidden pt-20">
+        
+        {/* Fullscreen Three.js WebGL 3D Architectural Scene */}
+        <div className="absolute inset-0 z-0">
+          <ThreeArchitectureScene height="100%" />
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-white flex flex-col items-center">
+        {/* Ambient Vignette & Text Readability Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-slate-950/90 to-transparent pointer-events-none" />
+
+        {/* Hero Copy Overlay */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center pointer-events-none flex flex-col items-center">
           <Reveal variant="fade-up" delay={100}>
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 backdrop-blur-md mb-8 hover:bg-amber-500/20 transition-colors cursor-default">
-              <Sparkles size={14} className="text-amber-400" />
-              <span className="text-xs font-bold tracking-[0.2em] uppercase text-amber-200">
-                48+ RERA-Verified Architectural Developments
-              </span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold uppercase tracking-widest mb-6 backdrop-blur-md pointer-events-auto">
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+              <span>Studio Vidhi Gajjar &bull; CA/2018/103740</span>
             </div>
           </Reveal>
-          
-          <Reveal variant="zoom" delay={300}>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-[1.05] text-balance">
-              Ancient Wisdom.<br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">
-                Statutory Precision.
+
+          <Reveal variant="zoom" delay={250}>
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[1.05] text-balance mb-6">
+              Sculpting Space.<br />
+              <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100 bg-clip-text text-transparent">
+                Certifying Landmarks.
               </span>
             </h1>
           </Reveal>
-          
-          <Reveal variant="fade-up" delay={500}>
-            <p className="text-lg md:text-xl text-stone-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed text-balance">
-              VastuCraft AI Studio blends the sacred geometry of <span className="text-amber-300 font-medium">Vastu Shastra</span> with the rigorous precision of <span className="text-sky-400 font-medium">statutory RERA compliance & AI monitoring</span>. Led by Ar. Vidhi S. Gajjar (CA/2018/103740) & Swetang Gajjar.
+
+          <Reveal variant="fade-up" delay={400}>
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed mb-10 text-balance">
+              An architectural practice uniting contemporary spatial design, statutory GujRERA certification, and high-density urban planning across 48+ developments.
             </p>
           </Reveal>
-          
-          <Reveal variant="fade-up" delay={700}>
-            <div className="flex flex-col sm:flex-row gap-5 w-full justify-center">
-              <Button 
-                variant="white"
-                size="lg" 
-                className="font-bold px-8 shadow-[0_0_25px_rgba(212,175,55,0.3)] bg-amber-600 hover:bg-amber-500 text-white border-0"
-                onClick={() => navigate('/contact')}
-              >
-                Start Your Project
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-white border-white/30 hover:bg-white/10 backdrop-blur-md px-8 group" 
+
+          <Reveal variant="fade-up" delay={550}>
+            <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
+              <button
                 onClick={() => navigate('/portfolio')}
+                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-xs uppercase tracking-widest transition-all shadow-xl shadow-amber-900/30 hover:scale-102 flex items-center justify-center gap-2"
               >
-                Explore 48 Projects <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <span>Explore 48 Projects Register</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+
+              <button
+                onClick={() => navigate('/practice')}
+                className="px-8 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white border border-white/10 font-semibold text-xs uppercase tracking-widest backdrop-blur-md transition-all"
+              >
+                Studio Philosophy
+              </button>
             </div>
           </Reveal>
         </div>
-
-        {/* Scroll Cue */}
-        <div 
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/30 animate-bounce cursor-pointer z-10 hover:text-white transition-colors"
-          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth'})}
-        >
-          <ArrowDown size={28} strokeWidth={1.5} />
-        </div>
       </section>
 
-      {/* 2. STATUTORY TRUST INDICATORS */}
-      <section className="bg-white border-b border-stone-200/70 py-12 relative z-10 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-           {[
-             { label: "RERA Registered Projects", value: "48+", sub: "100% Traceable" },
-             { label: "Architect of Record License", value: "CA/2018/103740", sub: "Council of Architecture" },
-             { label: "Cities across Gujarat", value: "6 Major", sub: "Ahmedabad, Gandhinagar, Surat..." },
-             { label: "Professional Experience", value: "8+ Years", sub: "Senior Architect & Lead" }
-           ].map((stat, i) => (
-             <Reveal key={i} delay={i * 100} variant="fade-up">
-               <div className="text-center p-4 rounded-xl hover:bg-stone-50 transition-colors">
-                 <div className="text-2xl sm:text-4xl font-serif font-bold text-slate-900 mb-1 font-mono tracking-tight">{stat.value}</div>
-                 <div className="text-xs font-bold tracking-widest uppercase text-amber-700">{stat.label}</div>
-                 <div className="text-[11px] text-slate-400 mt-0.5">{stat.sub}</div>
-               </div>
-             </Reveal>
-           ))}
-        </div>
-      </section>
-
-      {/* 3. VALUE PROPOSITION */}
-      <section className="py-24 bg-stone-50 relative z-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <Reveal className="mb-16">
-            <div className="flex flex-col md:flex-row justify-between items-end gap-6">
-              <div className="max-w-2xl">
-                <span className="text-amber-700 font-bold tracking-widest text-xs uppercase mb-2 block">The VastuCraft Methodology</span>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
-                  Design for the Soul.<br/>Build with Statutory Rigor.
-                </h2>
+      {/* 2. STATUTORY TRUST METRICS HUD */}
+      <section className="relative z-10 bg-slate-950 border-y border-white/5 py-12">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            { label: "RERA Registered Projects", value: "48+", sub: "100% Publicly Verified" },
+            { label: "Council of Architecture", value: "CA/2018/103740", sub: "Official License" },
+            { label: "Regional Coverage", value: "6 Cities", sub: "Ahmedabad, Gandhinagar, Surat..." },
+            { label: "Practice Experience", value: "8+ Years", sub: "Senior Architect of Record" }
+          ].map((stat, i) => (
+            <Reveal key={i} delay={i * 100} variant="fade-up">
+              <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-amber-500/30 transition-all text-center">
+                <div className="text-2xl sm:text-4xl font-serif font-bold text-white mb-1 font-mono tracking-tight text-amber-300">
+                  {stat.value}
+                </div>
+                <div className="text-xs font-mono font-bold tracking-widest uppercase text-slate-400">
+                  {stat.label}
+                </div>
+                <div className="text-[11px] text-slate-500 mt-1">{stat.sub}</div>
               </div>
-              <p className="text-stone-600 max-w-md pb-2 text-balance">
-                We bridge sacred Vedic spatial orientation with statutory RERA Form 1 compliance and AI-driven site automation for high-value real estate.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Statutory RERA Mastery",
-                subtitle: "48+ Projects Certified",
-                text: "Ar. Vidhi S. Gajjar brings 8+ years as Architect of Record for premier developers (Shilp, Shaligram, Swati, Goyal & Co., Ratnaakar). Every project is designed to navigate bylaws and municipal certifications smoothly.",
-                icon: <Shield className="w-8 h-8 text-amber-700" />
-              },
-              {
-                title: "AI-Grade Precision",
-                subtitle: "Smart Site Monitoring",
-                text: "Swetang Gajjar applies Computer Vision and Edge AI for real-time site safety, crack and defect analysis, and structural monitoring, cutting construction deviations and rework costs.",
-                icon: <Activity className="w-8 h-8 text-sky-500" />
-              },
-              {
-                title: "Vastu Harmony",
-                subtitle: "Energy Aligned Spaces",
-                text: "We optimize solar orientation, wind corridors, magnetic grid lines, and spatial zoning to create residences and corporate headquarters that feel inherently balanced and prosperous.",
-                icon: <Compass className="w-8 h-8 text-amber-600" />
-              }
-            ].map((item, idx) => (
-              <Reveal key={idx} delay={idx * 150} className="h-full">
-                <div className="p-8 bg-white rounded-2xl shadow-sm border border-stone-200/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-full flex flex-col justify-between">
-                  <div>
-                    <div className="w-14 h-14 bg-stone-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-slate-900 transition-colors">
-                      <div className="group-hover:text-white transition-colors">{item.icon}</div>
-                    </div>
-                    <h3 className="text-xl font-bold mb-1 text-slate-900">{item.title}</h3>
-                    <span className="text-xs font-bold uppercase tracking-wider text-amber-600 mb-4 block">{item.subtitle}</span>
-                    <p className="text-stone-600 leading-relaxed text-sm">{item.text}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      {/* 4. SERVICES SHOWCASE */}
-      <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
+      {/* 3. 3D PERSPECTIVE FEATURED PROJECTS SHOWCASE */}
+      <section className="py-28 bg-slate-950 relative overflow-hidden">
+        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-amber-500/5 blur-[160px] rounded-full pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <Reveal>
-             <div className="flex justify-between items-end mb-16">
-               <div>
-                  <span className="text-amber-400 font-bold text-xs uppercase tracking-widest mb-2 block">Our Capabilities</span>
-                  <h2 className="text-3xl md:text-5xl font-serif font-bold">End-to-End Architectural Solutions</h2>
-               </div>
-               <Button variant="outline" className="hidden md:flex text-white border-white/20 hover:bg-white hover:text-slate-900" onClick={() => navigate('/services')}>
-                 All Services
-               </Button>
-             </div>
-          </Reveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES_LIST.slice(0, 6).map((service, idx) => (
-              <Reveal key={idx} delay={idx * 100} width="100%">
-                <div 
-                  className="group relative bg-slate-800/40 border border-white/10 p-8 rounded-2xl hover:bg-slate-800 transition-all duration-300 h-full cursor-pointer overflow-hidden backdrop-blur-sm"
-                  onClick={() => navigate('/services')}
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all duration-500"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="mb-6 text-amber-400 opacity-80 group-hover:opacity-100 transition-opacity">
-                       {service.icon === 'Building' && <LayoutTemplate size={32} />}
-                       {service.icon === 'Sofa' && <Sparkles size={32} />}
-                       {service.icon === 'Cpu' && <BrainCircuit size={32} />}
-                       {service.icon === 'HardHat' && <HardHat size={32} />}
-                       {service.icon === 'Compass' && <Compass size={32} />}
-                       {service.icon === 'Frame' && <PenTool size={32} />}
-                    </div>
-                    
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-amber-300 transition-colors">{service.title}</h3>
-                    <p className="text-sm text-slate-400 leading-relaxed mb-6">{service.desc}</p>
-                    
-                    <div className="flex items-center text-xs font-bold uppercase tracking-widest text-amber-400 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                      Explore Service <MoveRight className="ml-2 w-3 h-3" />
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. FEATURED PORTFOLIO - 3D Tilt Cards */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div>
-                 <span className="text-amber-700 font-bold text-xs uppercase tracking-widest mb-2 block">Statutory Portfolio Highlights</span>
-                 <h2 className="text-4xl font-serif font-bold text-slate-900">Selected Landmark Projects</h2>
+                <span className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-2 block">
+                  Curated Statutory Portfolio
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+                  Landmarks in Execution
+                </h2>
               </div>
-              <Button 
-                variant="outline" 
+
+              <button
                 onClick={() => navigate('/portfolio')}
-                className="self-start md:self-auto flex items-center gap-2 text-slate-900 border-slate-300 hover:bg-slate-900 hover:text-white"
+                className="self-start md:self-auto flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-amber-300 hover:text-amber-200 transition-colors uppercase"
               >
-                Explore All 48 Projects <ArrowRight className="w-4 h-4" />
-              </Button>
+                <span>View Full 48-Project Registry</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-            {featuredProjects.map((project, i) => (
-              <Reveal key={project.id} delay={i * 120}>
+          {/* 3D Perspective Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {flagshipProjects.map((project, idx) => (
+              <Reveal key={project.id} delay={idx * 120}>
                 <Card3D
-                  maxTilt={6}
+                  maxTilt={8}
                   scale={1.02}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 flex flex-col group cursor-pointer"
+                  className="bg-slate-900/60 rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex flex-col group cursor-pointer"
                   onClick={() => navigate('/portfolio')}
                 >
-                  <div className="relative overflow-hidden bg-slate-900 h-72 w-full">
-                    <img 
-                      src={project.imageUrl} 
+                  <div className="relative h-72 w-full overflow-hidden bg-slate-950">
+                    <img
+                      src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-85"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                      <span className="bg-slate-900/80 backdrop-blur-md text-amber-300 border border-white/10 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                      <span className="bg-slate-950/80 backdrop-blur-md text-amber-300 text-[11px] font-mono font-bold px-3 py-1 rounded-full uppercase border border-amber-500/20">
                         {project.category}
                       </span>
-                      <span className="inline-flex items-center gap-1 bg-emerald-950/80 backdrop-blur-md text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
+                      <span className="inline-flex items-center gap-1 bg-emerald-950/80 backdrop-blur-md text-emerald-300 text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full border border-emerald-500/30">
+                        <CheckCircle2 className="w-3 h-3" />
                         RERA Verified
                       </span>
                     </div>
@@ -286,7 +167,7 @@ export const Home: React.FC = () => {
                       <h3 className="text-2xl font-serif font-bold text-white group-hover:text-amber-300 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-slate-300 text-xs flex items-center gap-1 mt-1">
+                      <p className="text-slate-400 text-xs flex items-center gap-1 mt-1 font-mono">
                         <MapPin className="w-3.5 h-3.5 text-amber-400" />
                         {project.city} &bull; {project.location.split(',')[0]}
                       </p>
@@ -294,16 +175,14 @@ export const Home: React.FC = () => {
                   </div>
 
                   <div className="p-6 flex flex-col justify-between flex-grow space-y-4">
-                    <p className="text-slate-600 text-xs leading-relaxed line-clamp-2">
+                    <p className="text-slate-400 text-xs leading-relaxed line-clamp-2">
                       {project.description}
                     </p>
-                    
-                    <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                      <span className="text-xs font-mono font-semibold text-slate-500">
-                        License: CA/2018/103740
-                      </span>
-                      <span className="text-xs font-bold text-amber-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                        View Project &rarr;
+
+                    <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+                      <span className="text-slate-500">COA: CA/2018/103740</span>
+                      <span className="text-amber-400 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                        Explore Details <ArrowUpRight className="w-3.5 h-3.5" />
                       </span>
                     </div>
                   </div>
@@ -314,38 +193,90 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. CALL TO ACTION */}
-      <section className="py-20 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]" />
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+      {/* 4. PRACTICE METHODOLOGY & PHILOSOPHY */}
+      <section className="py-28 bg-slate-900/40 border-t border-white/5 relative">
+        <div className="max-w-7xl mx-auto px-6">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-amber-300 text-xs font-bold uppercase tracking-widest mb-6">
-              <Award className="w-4 h-4" />
-              Trusted by Premier Developers Across Gujarat
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+              <div className="lg:col-span-1 space-y-6">
+                <span className="text-amber-400 font-mono text-xs uppercase tracking-widest block">
+                  Studio Methodology
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight">
+                  Design Grounded in Statutory Rigor.
+                </h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  We balance visionary spatial aesthetics with the rigorous regulatory compliance required by modern institutional real estate developments across Gujarat.
+                </p>
+              </div>
+
+              <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Statutory Approvals & Form 1",
+                    desc: "Full architectural certification, municipal GDCR compliance, and GujRERA project registration oversight.",
+                    icon: <ShieldCheck className="w-6 h-6 text-amber-400" />
+                  },
+                  {
+                    title: "High-Density Residential Towers",
+                    desc: "Optimized spatial layouts, structural grids, aerodynamic wind corridors, and luxury apartment planning.",
+                    icon: <Building2 className="w-6 h-6 text-sky-400" />
+                  },
+                  {
+                    title: "Corporate Headquarters & Retail",
+                    desc: "Flagship commercial massing, glass curtain wall elevations, vehicular circulation, and atrium design.",
+                    icon: <Layers className="w-6 h-6 text-indigo-400" />
+                  },
+                  {
+                    title: "AI Site Monitoring Integration",
+                    desc: "Partnered with smart automation systems for computer-vision quality checks and on-site compliance.",
+                    icon: <Sparkles className="w-6 h-6 text-amber-300" />
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-amber-500/20 transition-all space-y-3">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-base font-bold text-white">{item.title}</h3>
+                    <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-6 leading-tight">
-              Ready to Design Your Next Landmark?
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 5. CALL TO ACTION */}
+      <section className="py-24 bg-gradient-to-b from-slate-950 to-slate-900 text-center relative overflow-hidden border-t border-white/5">
+        <div className="max-w-4xl mx-auto px-6 relative z-10 space-y-8">
+          <Reveal>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-amber-300 text-xs font-mono font-semibold uppercase tracking-widest">
+              <Award className="w-4 h-4" />
+              Trusted by Top Institutional Developers
+            </div>
+
+            <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+              Commission Your Next Architectural Landmark
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 font-light">
-              Connect with Ar. Vidhi S. Gajjar & Swetang Gajjar for bespoke architectural planning, Vastu harmonization, and AI-enabled construction monitoring.
+
+            <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+              Consult with Ar. Vidhi S. Gajjar for statutory RERA architectural planning, master layouts, and bespoke luxury residential & commercial projects.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="white"
-                size="lg"
-                className="bg-amber-600 hover:bg-amber-500 text-white font-bold px-8 shadow-lg border-0"
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <button
                 onClick={() => navigate('/contact')}
+                className="px-8 py-3.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs uppercase tracking-widest transition-all shadow-xl shadow-amber-950"
               >
-                Schedule Consultation
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-white border-white/30 hover:bg-white/10 px-8"
+                Schedule Architectural Consultation
+              </button>
+              <button
                 onClick={() => navigate('/portfolio')}
+                className="px-8 py-3.5 rounded-xl bg-slate-900 text-slate-300 hover:text-white border border-white/10 font-mono text-xs uppercase tracking-widest"
               >
-                View 48 Projects Register
-              </Button>
+                Inspect 48 Statutory Records
+              </button>
             </div>
           </Reveal>
         </div>

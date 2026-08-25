@@ -3,8 +3,9 @@ import { ALL_VERIFIED_PROJECTS, PROJECT_STATISTICS } from '../data/projectsData'
 import { Project } from '../types';
 import Reveal from '../components/Reveal';
 import Card3D from '../components/Card3D';
-import ArchitecturalCanvas3D from '../components/ArchitecturalCanvas3D';
+import ThreeCityMap3D from '../components/ThreeCityMap3D';
 import ProjectModal from '../components/ProjectModal';
+import { useStudio } from '../context/StudioContext';
 import { 
   Search, 
   LayoutGrid, 
@@ -14,10 +15,10 @@ import {
   MapPin, 
   Building, 
   Award, 
-  Filter, 
   CheckCircle2, 
   Layers,
-  Sparkles
+  Sparkles,
+  Navigation
 } from 'lucide-react';
 
 export const Portfolio: React.FC = () => {
@@ -26,11 +27,11 @@ export const Portfolio: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { isBlueprintMode } = useStudio();
 
   const categories = ['All', 'Residential', 'Commercial', 'Mixed Development'];
-  const cities = ['All', 'Ahmedabad', 'Gandhinagar', 'Palanpur', 'Surendranagar', 'Mehsana', 'Surat'];
 
-  // Multi-criteria filter
+  // Multi-dimensional filtering logic
   const filteredProjects = useMemo(() => {
     return ALL_VERIFIED_PROJECTS.filter((project) => {
       const matchesCategory = 
@@ -56,91 +57,72 @@ export const Portfolio: React.FC = () => {
   }, [activeCategory, selectedCity, searchQuery]);
 
   return (
-    <div className="bg-stone-50 min-h-screen text-slate-900 selection:bg-amber-700 selection:text-white">
+    <div className={`min-h-screen pt-28 pb-20 ${isBlueprintMode ? 'bg-slate-950 text-cyan-50' : 'bg-slate-950 text-slate-100'}`}>
       
-      {/* 3D Hero Section */}
-      <section className="relative min-h-[520px] flex items-center justify-center overflow-hidden bg-slate-950 pt-28 pb-20">
-        
-        {/* Interactive 3D Wireframe & Particle Canvas */}
-        <ArchitecturalCanvas3D theme="dark" speed={1.2} />
-        
-        {/* Ambient Gradient Glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-sky-500/10 blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-50 via-transparent to-slate-950/80 pointer-events-none" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <Reveal variant="zoom">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-6 backdrop-blur-md">
-              <Sparkles className="w-3.5 h-3.5" />
-              Statutory 48-Project Architectural Register
+      {/* Portfolio Header */}
+      <div className="max-w-7xl mx-auto px-6 mb-12">
+        <Reveal>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-white/10 pb-8">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold uppercase tracking-widest mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                Statutory Architecture Register
+              </div>
+              <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white tracking-tight">
+                48 Traceable Developments
+              </h1>
+              <p className="text-sm sm:text-base text-slate-400 max-w-2xl mt-3 font-light leading-relaxed">
+                Comprehensive catalogue of architectural designs, statutory RERA Form 1 certifications, and master layouts certified by Ar. Vidhi S. Gajjar (<span className="font-mono text-amber-300">CA/2018/103740</span>).
+              </p>
             </div>
-            
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-tight mb-6">
-              Architecture Built on <br className="hidden sm:inline" />
-              <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100 bg-clip-text text-transparent">
-                Indisputable Integrity
+
+            {/* Quick Metrics Badge */}
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/10 shrink-0">
+              <div className="text-center px-3 border-r border-white/10">
+                <div className="text-2xl font-serif font-bold text-amber-300 font-mono">48</div>
+                <div className="text-[10px] font-mono uppercase text-slate-400">Total Sites</div>
+              </div>
+              <div className="text-center px-3 border-r border-white/10">
+                <div className="text-2xl font-serif font-bold text-sky-400 font-mono">6</div>
+                <div className="text-[10px] font-mono uppercase text-slate-400">Cities</div>
+              </div>
+              <div className="text-center px-3">
+                <div className="text-2xl font-serif font-bold text-emerald-400 font-mono">100%</div>
+                <div className="text-[10px] font-mono uppercase text-slate-400">Verified</div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* 3D HOLOGRAPHIC GUJARAT CITY CLUSTER MAP */}
+      <div className="max-w-7xl mx-auto px-6 mb-12">
+        <Reveal variant="fade-up">
+          <div className="space-y-3 mb-4">
+            <div className="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span className="flex items-center gap-1.5 uppercase font-bold text-amber-400">
+                <Navigation className="w-3.5 h-3.5" />
+                Interactive 3D Geographic Node Explorer
               </span>
-            </h1>
-            
-            <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-              Every project designed, planned, and certified under Council of Architecture registration{' '}
-              <span className="text-amber-400 font-mono font-bold">CA/2018/103740</span> by Ar. Vidhi S. Gajjar.
-              Verified against statutory GujRERA filings and developer records across Gujarat.
-            </p>
-
-            {/* Glassmorphic Metrics HUD */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-left">
-                <div className="flex items-center justify-between text-amber-400 mb-1">
-                  <Building className="w-5 h-5" />
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">Total Port</span>
-                </div>
-                <div className="text-3xl font-serif font-bold text-white">48+</div>
-                <div className="text-xs text-slate-400 mt-0.5">RERA Registered Projects</div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-left">
-                <div className="flex items-center justify-between text-emerald-400 mb-1">
-                  <ShieldCheck className="w-5 h-5" />
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">Traceable</span>
-                </div>
-                <div className="text-3xl font-serif font-bold text-white">100%</div>
-                <div className="text-xs text-slate-400 mt-0.5">Public Record Verified</div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-left">
-                <div className="flex items-center justify-between text-sky-400 mb-1">
-                  <MapPin className="w-5 h-5" />
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">Spread</span>
-                </div>
-                <div className="text-3xl font-serif font-bold text-white">6</div>
-                <div className="text-xs text-slate-400 mt-0.5">Cities across Gujarat</div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-left">
-                <div className="flex items-center justify-between text-amber-300 mb-1">
-                  <Award className="w-5 h-5" />
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">License</span>
-                </div>
-                <div className="text-lg font-mono font-bold text-white truncate">CA/2018/103740</div>
-                <div className="text-xs text-slate-400 mt-1">Council of Architecture</div>
-              </div>
+              <span>Click a city beacon to filter projects</span>
             </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Main Explorer Body */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        
-        {/* Controls Toolbar */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 mb-10 space-y-6">
+          </div>
           
-          {/* Top Row: Search & View Toggle */}
+          <ThreeCityMap3D
+            selectedCity={selectedCity}
+            onSelectCity={(city) => setSelectedCity(city)}
+          />
+        </Reveal>
+      </div>
+
+      {/* EXPLORER TOOLBAR & FILTERS */}
+      <div className="max-w-7xl mx-auto px-6 mb-10">
+        <div className="p-6 rounded-2xl bg-slate-900/60 border border-white/10 backdrop-blur-xl shadow-2xl space-y-6">
+          
+          {/* Search Bar & View Mode Switcher */}
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
             
-            {/* Search Input */}
+            {/* Instant Fuzzy Search */}
             <div className="relative flex-grow max-w-xl">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
@@ -148,37 +130,37 @@ export const Portfolio: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by project name, developer (Shilp, Shaligram, Swati, Goyal), or locality..."
-                className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-600/30 focus:border-amber-600 transition-all placeholder:text-slate-400"
+                className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-950/80 border border-white/10 text-xs sm:text-sm font-sans text-white focus:outline-none focus:border-amber-500 transition-all placeholder:text-slate-500"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-700 bg-slate-200 px-2 py-0.5 rounded-full"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono text-slate-400 hover:text-white bg-white/10 px-2 py-0.5 rounded-full"
                 >
                   Clear
                 </button>
               )}
             </div>
 
-            {/* Dual View Switcher */}
-            <div className="flex items-center gap-1 p-1 bg-slate-100 rounded-xl shrink-0 self-start md:self-auto">
+            {/* Grid ⟷ Table Toggle */}
+            <div className="flex items-center gap-1 p-1 bg-slate-950 rounded-xl border border-white/10 shrink-0 self-start md:self-auto">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-mono font-semibold transition-all ${
                   viewMode === 'grid'
-                    ? 'bg-white text-slate-900 shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'bg-amber-600 text-white shadow-lg'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 <LayoutGrid className="w-3.5 h-3.5" />
-                3D Visual Grid
+                3D Spatial Grid
               </button>
               <button
                 onClick={() => setViewMode('table')}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-mono font-semibold transition-all ${
                   viewMode === 'table'
-                    ? 'bg-white text-slate-900 shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'bg-amber-600 text-white shadow-lg'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 <TableIcon className="w-3.5 h-3.5" />
@@ -187,14 +169,12 @@ export const Portfolio: React.FC = () => {
             </div>
           </div>
 
-          {/* Bottom Row: Typology & City Filters */}
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pt-4 border-t border-slate-100">
-            
-            {/* Typology Pills */}
+          {/* Typology Filter Buttons */}
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-1 flex items-center gap-1">
-                <Layers className="w-3.5 h-3.5" />
-                Type:
+              <span className="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider mr-1 flex items-center gap-1">
+                <Layers className="w-3.5 h-3.5 text-amber-400" />
+                Typology:
               </span>
               {categories.map((cat) => {
                 const count = cat === 'All' 
@@ -204,10 +184,10 @@ export const Portfolio: React.FC = () => {
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all focus:outline-none ${
+                    className={`px-4 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all ${
                       activeCategory === cat
-                        ? 'bg-slate-900 text-white shadow-md'
-                        : 'bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200/60'
+                        ? 'bg-amber-600 text-white shadow-md border border-amber-400/50'
+                        : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
                     {cat} <span className="opacity-70 ml-1">({count})</span>
@@ -216,107 +196,85 @@ export const Portfolio: React.FC = () => {
               })}
             </div>
 
-            {/* City Filter Pills */}
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-1 flex items-center gap-1">
-                <MapPin className="w-3.5 h-3.5" />
-                City:
-              </span>
-              {cities.map((city) => (
+            {/* Results Count & Reset */}
+            <div className="flex items-center gap-3 text-xs font-mono text-slate-400">
+              <span>Showing <b>{filteredProjects.length}</b> of {ALL_VERIFIED_PROJECTS.length}</span>
+              {(searchQuery || activeCategory !== 'All' || selectedCity !== 'All') && (
                 <button
-                  key={city}
-                  onClick={() => setSelectedCity(city)}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
-                    selectedCity === city
-                      ? 'bg-amber-600 text-white shadow-sm'
-                      : 'bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200/60'
-                  }`}
+                  onClick={() => {
+                    setSearchQuery('');
+                    setActiveCategory('All');
+                    setSelectedCity('All');
+                  }}
+                  className="text-amber-400 hover:underline font-bold"
                 >
-                  {city}
+                  [Reset Filters]
                 </button>
-              ))}
+              )}
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Results Counter Bar */}
-        <div className="flex items-center justify-between mb-8 px-2">
-          <div className="text-xs sm:text-sm text-slate-500 font-medium">
-            Showing <span className="font-bold text-slate-900">{filteredProjects.length}</span> of {ALL_VERIFIED_PROJECTS.length} verified statutory developments
-          </div>
-          {(searchQuery || activeCategory !== 'All' || selectedCity !== 'All') && (
-            <button
-              onClick={() => {
-                setSearchQuery('');
-                setActiveCategory('All');
-                setSelectedCity('All');
-              }}
-              className="text-xs text-amber-700 hover:underline font-semibold"
-            >
-              Reset all filters
-            </button>
-          )}
-        </div>
-
+      {/* PROJECTS DISPLAY AREA */}
+      <div className="max-w-7xl mx-auto px-6">
+        
         {/* Empty State */}
         {filteredProjects.length === 0 && (
-          <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-slate-300">
-            <Building className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-            <h3 className="text-lg font-serif font-bold text-slate-800">No matching projects found</h3>
-            <p className="text-xs text-slate-500 max-w-sm mx-auto mt-1">
-              Try adjusting your search terms or clearing the selected city/typology filters.
-            </p>
+          <div className="text-center py-20 bg-slate-900/40 rounded-2xl border border-dashed border-white/10">
+            <Building className="w-12 h-12 text-slate-600 mx-auto mb-3" />
+            <h3 className="text-lg font-serif font-bold text-white">No developments found</h3>
+            <p className="text-xs font-mono text-slate-400 mt-1">Try resetting search keywords or city filter.</p>
             <button
               onClick={() => {
                 setSearchQuery('');
                 setActiveCategory('All');
                 setSelectedCity('All');
               }}
-              className="mt-4 px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-amber-700 transition-all"
+              className="mt-4 px-4 py-2 rounded-xl bg-amber-600 text-white text-xs font-mono uppercase font-semibold"
             >
-              Reset Filters
+              Reset All Filters
             </button>
           </div>
         )}
 
-        {/* MODE 1: 3D Visual Grid View */}
+        {/* MODE 1: 3D Spatial Grid Showcase */}
         {viewMode === 'grid' && filteredProjects.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, idx) => (
-              <Reveal key={project.id} delay={Math.min(idx * 60, 400)}>
-                <Card3D 
-                  maxTilt={8} 
-                  scale={1.02} 
-                  glareOpacity={0.2}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 border border-slate-100 flex flex-col h-full group"
+              <Reveal key={project.id} delay={Math.min(idx * 50, 350)}>
+                <Card3D
+                  maxTilt={8}
+                  scale={1.02}
+                  className="bg-slate-900/60 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/40 shadow-xl flex flex-col h-full group"
                 >
                   {/* Card Media Header */}
-                  <div className="relative h-60 w-full overflow-hidden bg-slate-900">
+                  <div className="relative h-60 w-full overflow-hidden bg-slate-950">
                     <img
                       src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                    
-                    {/* Top Badges */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+
+                    {/* Top Status Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                      <span className="bg-slate-900/80 backdrop-blur-md text-amber-300 border border-white/10 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                      <span className="bg-slate-950/80 backdrop-blur-md text-amber-300 text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase border border-white/10">
                         {project.category}
                       </span>
-                      <span className="inline-flex items-center gap-1 bg-emerald-950/80 backdrop-blur-md text-emerald-300 border border-emerald-500/30 text-[10px] font-semibold px-2.5 py-1 rounded-full">
+                      <span className="inline-flex items-center gap-1 bg-emerald-950/80 backdrop-blur-md text-emerald-300 text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full border border-emerald-500/30">
                         <CheckCircle2 className="w-3 h-3" />
                         RERA
                       </span>
                     </div>
 
-                    {/* Bottom Title on Image */}
+                    {/* Bottom Title on Cover */}
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-xl font-serif font-bold text-white group-hover:text-amber-300 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-slate-300 text-xs flex items-center gap-1 mt-0.5">
+                      <p className="text-slate-300 text-xs flex items-center gap-1 mt-0.5 font-mono">
                         <MapPin className="w-3 h-3 text-amber-400 shrink-0" />
                         {project.city} &bull; {project.location.split(',')[0]}
                       </p>
@@ -326,20 +284,20 @@ export const Portfolio: React.FC = () => {
                   {/* Card Body */}
                   <div className="p-6 flex flex-col flex-grow justify-between space-y-4">
                     <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs text-slate-500 pb-2 border-b border-slate-100">
+                      <div className="flex items-center justify-between text-xs font-mono text-slate-400 pb-2 border-b border-white/5">
                         <span>Architect of Record</span>
-                        <span className="font-mono font-bold text-slate-800">CA/2018/103740</span>
+                        <span className="font-bold text-amber-300">CA/2018/103740</span>
                       </div>
-                      <p className="text-slate-600 text-xs leading-relaxed line-clamp-2">
+                      <p className="text-slate-400 text-xs leading-relaxed line-clamp-2">
                         {project.description}
                       </p>
                     </div>
 
-                    {/* Actions */}
-                    <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                    {/* Action Buttons */}
+                    <div className="pt-3 border-t border-white/5 flex items-center justify-between gap-2">
                       <button
                         onClick={() => setSelectedProject(project)}
-                        className="text-xs font-semibold text-slate-900 hover:text-amber-700 flex items-center gap-1 transition-colors"
+                        className="text-xs font-mono font-semibold text-slate-300 hover:text-amber-300 flex items-center gap-1 transition-colors"
                       >
                         Details & Specs &rarr;
                       </button>
@@ -348,10 +306,10 @@ export const Portfolio: React.FC = () => {
                         href={project.verificationLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 text-[11px] font-semibold transition-colors"
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-mono font-semibold transition-colors"
                         title="View direct public record or statutory Form 1 certificate"
                       >
-                        <span>Verify Record</span>
+                        <span>Verify Proof</span>
                         <ExternalLink className="w-3 h-3" />
                       </a>
                     </div>
@@ -362,47 +320,45 @@ export const Portfolio: React.FC = () => {
           </div>
         )}
 
-        {/* MODE 2: Statutory Ledger Table View */}
+        {/* MODE 2: Statutory Ledger Table */}
         {viewMode === 'table' && filteredProjects.length > 0 && (
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden animate-fade-in">
+          <div className="bg-slate-900/70 rounded-2xl shadow-2xl border border-white/10 overflow-hidden backdrop-blur-xl">
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs sm:text-sm">
-                <thead className="bg-slate-900 text-white uppercase text-[11px] font-mono tracking-wider">
+              <table className="w-full text-left text-xs font-mono">
+                <thead className="bg-slate-950 text-amber-400 uppercase text-[10px] tracking-wider border-b border-white/10">
                   <tr>
-                    <th className="py-4 px-4 font-semibold">#</th>
-                    <th className="py-4 px-4 font-semibold">Project Name</th>
-                    <th className="py-4 px-4 font-semibold">City / Region</th>
-                    <th className="py-4 px-4 font-semibold">Typology</th>
-                    <th className="py-4 px-4 font-semibold">COA License</th>
-                    <th className="py-4 px-4 font-semibold">Status / Stage</th>
-                    <th className="py-4 px-4 font-semibold text-right">Statutory Proof Link</th>
+                    <th className="py-4 px-4 font-bold">#</th>
+                    <th className="py-4 px-4 font-bold">Project Name</th>
+                    <th className="py-4 px-4 font-bold">City / Region</th>
+                    <th className="py-4 px-4 font-bold">Typology</th>
+                    <th className="py-4 px-4 font-bold">COA Registration</th>
+                    <th className="py-4 px-4 font-bold">Milestone Stage</th>
+                    <th className="py-4 px-4 font-bold text-right">Statutory Proof</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 font-sans">
+                <tbody className="divide-y divide-white/5">
                   {filteredProjects.map((p, i) => (
-                    <tr key={p.id} className="hover:bg-amber-50/50 transition-colors">
-                      <td className="py-3.5 px-4 text-slate-400 font-mono">{i + 1}</td>
-                      <td className="py-3.5 px-4 font-bold text-slate-900">
+                    <tr key={p.id} className="hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3.5 px-4 text-slate-500">{i + 1}</td>
+                      <td className="py-3.5 px-4 font-bold text-white font-sans text-sm">
                         <button
                           onClick={() => setSelectedProject(p)}
-                          className="hover:text-amber-700 text-left font-bold"
+                          className="hover:text-amber-300 text-left font-bold"
                         >
                           {p.title}
                         </button>
-                        <div className="text-[11px] font-normal text-slate-500">{p.location}</div>
+                        <div className="text-[11px] font-mono font-normal text-slate-400">{p.location}</div>
                       </td>
-                      <td className="py-3.5 px-4 font-medium text-slate-700">{p.city}</td>
+                      <td className="py-3.5 px-4 text-slate-300">{p.city}</td>
                       <td className="py-3.5 px-4">
-                        <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-slate-100 text-slate-700">
+                        <span className="px-2.5 py-1 rounded-full text-[10px] bg-white/5 text-amber-300 border border-white/5">
                           {p.category}
                         </span>
                       </td>
-                      <td className="py-3.5 px-4 font-mono text-xs text-slate-600">
-                        CA/2018/103740
-                      </td>
+                      <td className="py-3.5 px-4 text-slate-300 font-bold">CA/2018/103740</td>
                       <td className="py-3.5 px-4">
-                        <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold text-xs">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                        <span className="inline-flex items-center gap-1 text-emerald-400">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
                           {p.constructionStage || 'RERA Active'}
                         </span>
                       </td>
@@ -411,9 +367,9 @@ export const Portfolio: React.FC = () => {
                           href={p.verificationLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-amber-700 text-xs font-medium transition-all shadow-sm"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-[11px] font-mono font-semibold transition-all shadow-md"
                         >
-                          <span>Statutory Link</span>
+                          <span>Open Record</span>
                           <ExternalLink className="w-3 h-3" />
                         </a>
                       </td>
@@ -426,10 +382,10 @@ export const Portfolio: React.FC = () => {
         )}
       </div>
 
-      {/* Project Deep-Dive Modal */}
-      <ProjectModal 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
+      {/* Project Deep-Dive Modal Drawer */}
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
       />
     </div>
   );

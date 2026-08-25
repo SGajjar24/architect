@@ -1,229 +1,157 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ArrowRight, Phone, MapPin } from 'lucide-react';
-import Logo from './Logo';
-import { CONTACT_INFO } from '../constants';
+import { Link, useLocation } from 'react-router-dom';
+import { useStudio } from '../context/StudioContext';
+import { Menu, X, Compass, Grid, Sparkles, Award, ArrowUpRight } from 'lucide-react';
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+export const Navbar: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-
-  // "Transparent" state applies when at top of ANY page (over dark hero)
-  // We assume all pages now have a dark hero section.
-  const isDarkHero = !scrolled;
+  const { isBlueprintMode, toggleBlueprintMode } = useStudio();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
-
-  const handleNavigation = (path: string) => {
-    navigate(path);
-    setIsOpen(false);
-  };
-
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Vastu', path: '/vastu' },
-    { name: 'AI Tech', path: '/ai-construction' },
-    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'PROJECTS (48)', path: '/portfolio' },
+    { name: 'PRACTICE', path: '/practice' },
+    { name: 'ABOUT', path: '/about' },
+    { name: 'CONTACT', path: '/contact' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
-
-  // --- Dynamic Styling Classes ---
-  
-  // Determine Logo Variant
-  const logoVariant = (isOpen || isDarkHero) ? 'light' : 'dark';
-
-  // Nav Pill Container Style
-  const navPillClass = scrolled 
-    ? 'bg-slate-100/80 border-slate-200/50 backdrop-blur-md' 
-    : (isDarkHero 
-        ? 'bg-white/10 border-white/10 backdrop-blur-md' 
-        : 'bg-white/40 border-white/40 backdrop-blur-sm shadow-sm');
-
-  // Action Button Style
-  const actionButtonClass = isDarkHero 
-    ? 'bg-white text-slate-900 hover:bg-stone-100 shadow-black/5' 
-    : 'bg-slate-900 text-white hover:bg-secondary shadow-slate-900/20';
-
-  // Mobile Toggle Button Style
-  const mobileToggleClass = isOpen 
-    ? 'bg-white text-slate-900 hover:bg-slate-200 shadow-lg' 
-    : (isDarkHero
-        ? 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-md'
-        : 'bg-slate-100 text-slate-900 hover:bg-slate-200');
-
   return (
-    <>
-      <nav 
-        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ease-in-out ${
-          scrolled 
-            ? 'py-3 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-200/50' 
-            : 'py-6 bg-transparent'
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-4 sm:px-8">
+      <div
+        className={`max-w-7xl mx-auto rounded-2xl transition-all duration-500 px-6 py-3.5 flex items-center justify-between ${
+          isScrolled || isMobileMenuOpen
+            ? 'bg-slate-950/90 backdrop-blur-xl border border-white/10 shadow-2xl'
+            : 'bg-slate-950/60 backdrop-blur-md border border-white/5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center">
-            
-            {/* Logo Area */}
-            <div className="relative z-[70]">
-              <button onClick={() => handleNavigation('/')} className="focus:outline-none group">
-                <Logo variant={logoVariant} />
-              </button>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center justify-center flex-1">
-              <div className={`flex items-center space-x-1 p-1.5 rounded-full border transition-all duration-500 ${navPillClass}`}>
-                {navLinks.map((link) => {
-                   const active = isActive(link.path);
-                   let linkClass = "px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 focus:outline-none ";
-                   if (active) {
-                     linkClass += "bg-white text-slate-900 shadow-md transform scale-105";
-                   } else if (isDarkHero) {
-                     linkClass += "text-stone-300 hover:text-white hover:bg-white/10";
-                   } else {
-                     linkClass += "text-slate-600 hover:text-slate-900 hover:bg-white/50";
-                   }
-
-                   return (
-                    <button
-                      key={link.name}
-                      onClick={() => handleNavigation(link.path)}
-                      className={linkClass}
-                    >
-                      {link.name}
-                    </button>
-                   );
-                })}
-              </div>
-            </div>
-
-            {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center justify-end gap-4">
-              <button 
-                onClick={() => handleNavigation('/contact')}
-                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2 ${actionButtonClass}`}
-              >
-                Start Project <ArrowRight size={14} />
-              </button>
-            </div>
-
-            {/* Mobile Menu Toggle */}
-            <div className="flex items-center lg:hidden z-[70]">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className={`p-2 rounded-full focus:outline-none transition-colors duration-300 ${mobileToggleClass}`}
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
+        {/* Brand Logo */}
+        <Link to="/" className="flex items-center gap-3 group focus:outline-none">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 p-0.5 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+              <span className="font-serif font-bold text-lg bg-gradient-to-br from-amber-200 to-amber-400 bg-clip-text text-transparent">
+                VG
+              </span>
             </div>
           </div>
-        </div>
-      </nav>
+          <div>
+            <div className="font-serif font-bold text-base sm:text-lg tracking-wider text-white group-hover:text-amber-300 transition-colors">
+              STUDIO VIDHI GAJJAR
+            </div>
+            <div className="text-[10px] font-mono tracking-widest text-amber-400/90 flex items-center gap-1.5 uppercase">
+              <span>ARCHITECT</span>
+              <span>&bull;</span>
+              <span className="text-slate-400 font-bold">CA/2018/103740</span>
+            </div>
+          </div>
+        </Link>
 
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-[65] bg-slate-900 transition-all duration-500 ease-in-out lg:hidden flex flex-col ${
-          isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
-        }`}
-      >
-        <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[80px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-
-        <div className="flex-1 flex flex-col justify-center px-8 pt-20 pb-8 overflow-y-auto">
-          <div className="space-y-6">
-            {navLinks.map((link, idx) => (
-              <button
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
                 key={link.name}
-                onClick={() => handleNavigation(link.path)}
-                className={`block text-left text-4xl md:text-5xl font-serif font-bold transition-all duration-300 group flex items-center gap-4 ${
-                  isActive(link.path) ? 'text-secondary translate-x-2' : 'text-white hover:text-slate-300'
+                to={link.path}
+                className={`text-xs font-mono font-semibold tracking-widest uppercase transition-all relative py-1 ${
+                  isActive
+                    ? 'text-amber-300'
+                    : 'text-slate-300 hover:text-white'
                 }`}
-                style={{ 
-                  transitionDelay: `${100 + (idx * 50)}ms`,
-                  opacity: isOpen ? 1 : 0,
-                  transform: isOpen ? 'translateX(0)' : 'translateX(-20px)'
-                }}
               >
-                <span className="relative">
-                  {link.name}
-                  {isActive(link.path) && (
-                    <span className="absolute -left-6 top-1/2 -translate-y-1/2 w-2 h-2 bg-secondary rounded-full"></span>
-                  )}
-                </span>
-                <ArrowRight className={`opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${isActive(link.path) ? 'hidden' : 'block'}`} size={28} strokeWidth={1.5} />
-              </button>
-            ))}
+                {link.name}
+                {isActive && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-400 to-amber-200 rounded-full" />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
 
-            <button
-                onClick={() => setIsOpen(false)}
-                className="group flex items-center gap-4 text-left text-2xl md:text-3xl font-serif font-bold text-slate-500 hover:text-white transition-all duration-300 mt-8"
-                style={{ 
-                  transitionDelay: `${100 + (navLinks.length * 50)}ms`,
-                  opacity: isOpen ? 1 : 0,
-                  transform: isOpen ? 'translateX(0)' : 'translateX(-20px)'
-                }}
-            >
-                <span className="w-10 h-10 rounded-full border border-slate-600 flex items-center justify-center group-hover:border-white group-hover:bg-white/10 transition-colors">
-                  <X size={20} />
-                </span>
-                <span>Close</span>
-            </button>
-          </div>
-
-          <div 
-            className="mt-12 pt-12 border-t border-slate-800/50 grid gap-8 transition-all duration-700 delay-300"
-            style={{ 
-              opacity: isOpen ? 1 : 0,
-              transform: isOpen ? 'translateY(0)' : 'translateY(20px)'
-            }}
+        {/* Actions Toolbar */}
+        <div className="hidden sm:flex items-center gap-3">
+          {/* Blueprint CAD Mode Switcher */}
+          <button
+            onClick={toggleBlueprintMode}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all border ${
+              isBlueprintMode
+                ? 'bg-cyan-950 border-cyan-400 text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.4)]'
+                : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:bg-white/10'
+            }`}
+            title="Toggle Technical Architectural CAD Grid"
           >
-            <button 
-              onClick={() => handleNavigation('/contact')}
-              className="bg-white text-slate-900 w-full py-4 rounded-xl text-lg font-bold hover:bg-secondary hover:text-white transition-all duration-300 shadow-lg shadow-black/20"
-            >
-              Start Your Project
-            </button>
+            <Grid className={`w-3.5 h-3.5 ${isBlueprintMode ? 'text-cyan-400 animate-pulse' : ''}`} />
+            <span>{isBlueprintMode ? 'CAD: ON' : 'CAD GRID'}</span>
+          </button>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-slate-400">
-              <div className="flex items-start gap-3">
-                <MapPin className="shrink-0 text-secondary" />
-                <p className="text-sm">Main Studio,<br/>{CONTACT_INFO.ADDRESS_LINE_2}</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="shrink-0 text-secondary" />
-                <p className="text-sm">{CONTACT_INFO.PHONE_DISPLAY}</p>
-              </div>
-            </div>
-          </div>
+          {/* Consultation CTA Button */}
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white text-xs font-semibold tracking-wide transition-all shadow-md shadow-amber-900/30 hover:scale-102 focus:outline-none"
+          >
+            <span>Commission Project</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="flex sm:hidden items-center gap-2">
+          <button
+            onClick={toggleBlueprintMode}
+            className={`p-2 rounded-lg border text-xs font-mono ${
+              isBlueprintMode
+                ? 'bg-cyan-950 border-cyan-400 text-cyan-300'
+                : 'bg-white/5 border-white/10 text-slate-400'
+            }`}
+          >
+            <Grid className="w-4 h-4" />
+          </button>
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 rounded-xl bg-white/5 text-white hover:bg-white/10 transition-colors"
+            aria-label="Toggle Navigation"
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
       </div>
-    </>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="sm:hidden mt-2 p-6 rounded-2xl bg-slate-950/95 backdrop-blur-2xl border border-white/10 shadow-2xl space-y-4 animate-fade-in-up">
+          <nav className="flex flex-col space-y-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-sm font-mono font-semibold tracking-wider text-slate-200 hover:text-amber-300 py-2 border-b border-white/5"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+          
+          <Link
+            to="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block text-center w-full py-3 rounded-xl bg-amber-600 text-white font-bold text-xs uppercase tracking-widest"
+          >
+            Commission Project
+          </Link>
+        </div>
+      )}
+    </header>
   );
 };
 

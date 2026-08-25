@@ -1,85 +1,110 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Instagram, Linkedin, Twitter, MapPin, Mail, Phone } from 'lucide-react';
-import Logo from './Logo';
-import { CONTACT_INFO, SOCIAL_LINKS } from '../constants';
+import { Link } from 'react-router-dom';
+import { Award, ShieldCheck, MapPin, Mail, Phone, ExternalLink, ArrowUpRight } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleServiceClick = (hash: string) => {
-    navigate(`/services#${hash}`);
-  };
-
+export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-white border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex flex-col mb-4">
-              <Logo variant="light" />
+    <footer className="bg-slate-950 text-white border-t border-slate-900 relative overflow-hidden">
+      {/* Ambient background glow */}
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[300px] bg-amber-500/5 blur-[150px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+          
+          {/* Column 1 & 2: Studio Overview */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 p-0.5 flex items-center justify-center">
+                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+                  <span className="font-serif font-bold text-lg text-amber-300">VG</span>
+                </div>
+              </div>
+              <div>
+                <div className="font-serif font-bold text-xl tracking-wider">STUDIO VIDHI GAJJAR</div>
+                <div className="text-xs font-mono text-amber-400">ARCHITECT &bull; CA/2018/103740</div>
+              </div>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6 mt-4">
-              Where Vastu-perfect design meets AI-powered construction. Led by Ar. Vidhi Gajjar & Swetang Gajjar.
+
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
+              Contemporary architectural planning, high-density residential towers, flagship commercial headquarters, and statutory GujRERA certifications across Gujarat.
             </p>
-            <div className="flex space-x-4">
-              <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-500 bg-transparent border-0 cursor-pointer"><Instagram size={20} /></a>
-              <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-500 bg-transparent border-0 cursor-pointer"><Linkedin size={20} /></a>
-              <a href={SOCIAL_LINKS.TWITTER} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-500 bg-transparent border-0 cursor-pointer"><Twitter size={20} /></a>
+
+            <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2 text-xs">
+              <div className="flex items-center gap-2 text-amber-300 font-semibold">
+                <Award className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Statutory Authority & Registration</span>
+              </div>
+              <div className="text-slate-300 font-mono text-[11px]">
+                Council of Architecture: <b>CA/2018/103740</b><br />
+                Certifying Architect of Record: <b>48+ RERA Developments</b>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 font-serif">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li><button onClick={() => navigate('/about')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">About Us</button></li>
-              <li><button onClick={() => navigate('/services')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Services</button></li>
-              <li><button onClick={() => navigate('/portfolio')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Portfolio</button></li>
-              <li><button onClick={() => navigate('/blog')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Blog</button></li>
-              <li><button onClick={() => navigate('/contact')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Contact</button></li>
+          {/* Column 3: Navigation */}
+          <div className="space-y-4">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Practice</h4>
+            <ul className="space-y-2.5 text-xs text-slate-400 font-medium">
+              <li><Link to="/portfolio" className="hover:text-white transition-colors">48 Projects Register</Link></li>
+              <li><Link to="/practice" className="hover:text-white transition-colors">Architecture & Planning</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">Ar. Vidhi S. Gajjar</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">Swetang Gajjar (AI Lead)</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Commission Inquiry</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 font-serif">Services</h3>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li><button onClick={() => handleServiceClick('architecture')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Architecture</button></li>
-              <li><button onClick={() => handleServiceClick('interiors')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Interior Design</button></li>
-              <li><button onClick={() => handleServiceClick('vastu')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Vastu Consulting</button></li>
-              <li><button onClick={() => handleServiceClick('ai-tech')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">AI Construction Monitoring</button></li>
-              <li><button onClick={() => handleServiceClick('exterior')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Facade Design</button></li>
-              <li><button onClick={() => handleServiceClick('construction')} className="hover:text-amber-500 bg-transparent border-0 p-0 cursor-pointer text-left">Turnkey Construction</button></li>
+          {/* Column 4: Key Regions */}
+          <div className="space-y-4">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Territories</h4>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li className="flex items-center justify-between">
+                <span>Ahmedabad</span>
+                <span className="font-mono text-slate-500">34 Projects</span>
+              </li>
+              <li className="flex items-center justify-between">
+                <span>Gandhinagar</span>
+                <span className="font-mono text-slate-500">8 Projects</span>
+              </li>
+              <li className="flex items-center justify-between">
+                <span>Palanpur / Banaskantha</span>
+                <span className="font-mono text-slate-500">3 Projects</span>
+              </li>
+              <li className="flex items-center justify-between">
+                <span>Surat, Surendranagar, Mehsana</span>
+                <span className="font-mono text-slate-500">3 Projects</span>
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 font-serif">Contact</h3>
-            <ul className="space-y-4 text-sm text-slate-400">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-amber-500 shrink-0 mt-0.5" />
-                <span>Offices in Ahmedabad<br/>and Gandhinagar</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-amber-500 shrink-0" />
-                <span>{CONTACT_INFO.PHONE_DISPLAY}</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-amber-500 shrink-0" />
-                <span>{CONTACT_INFO.EMAIL}</span>
-              </li>
-            </ul>
+          {/* Column 5: Coordinates */}
+          <div className="space-y-4">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Coordinates</h4>
+            <div className="space-y-3 text-xs text-slate-400 leading-relaxed">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <span>Science City Road / Ambawadi, Ahmedabad, Gujarat 380060</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>contact@studiovidhigajjar.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>+91 9104518311</span>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} VastuCraft AI Studio. All rights reserved.</p>
-          <div className="mt-4 md:mt-0 flex space-x-6">
-            <button onClick={() => navigate('/privacy')} className="hover:text-white bg-transparent border-0 cursor-pointer">Privacy Policy</button>
-            <button onClick={() => navigate('/terms')} className="hover:text-white bg-transparent border-0 cursor-pointer">Terms of Service</button>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div>
+            &copy; {new Date().getFullYear()} Studio Vidhi Gajjar. All Rights Reserved.
+          </div>
+          <div className="flex items-center gap-6 font-mono text-[11px]">
+            <span>COA: CA/2018/103740</span>
+            <span>&bull;</span>
+            <Link to="/privacy" className="hover:text-slate-400">Statutory Notice</Link>
           </div>
         </div>
       </div>
