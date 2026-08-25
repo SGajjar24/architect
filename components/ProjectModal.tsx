@@ -144,7 +144,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 Statutory Proof & Form 1 Verification
               </div>
               <div className="text-xs text-slate-400 mt-0.5">
-                Certified under Council of Architecture license <b>CA/2018/103740</b>.
+                {project.verificationLink === 'https://gujrera.gujarat.gov.in/' 
+                  ? 'Verify architect details using GujRERA Advanced Search with the RERA ID.'
+                  : 'Certified under Council of Architecture license CA/2018/103740.'}
               </div>
             </div>
             <a
@@ -153,7 +155,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-lg shrink-0 focus:outline-none"
             >
-              <span>Verify Official Record</span>
+              <span>{project.verificationLink === 'https://gujrera.gujarat.gov.in/' ? 'Search GujRERA Portal' : 'Verify Official Record'}</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>
