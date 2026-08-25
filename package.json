@@ -1,0 +1,8 @@
+{
+  "name": "architect-portfolio-ecosystem",
+  "private": true,
+  "scripts": {
+    "build": "cd 01_VastuCraft_Web_App && npm install && npm run build",
+    "dev": "cd 01_VastuCraft_Web_App && npm run dev"
+  }
+}

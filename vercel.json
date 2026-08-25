@@ -1,8 +1,10 @@
 {
+  "buildCommand": "cd 01_VastuCraft_Web_App && npm install && npm run build",
+  "outputDirectory": "01_VastuCraft_Web_App/dist",
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/$1"
+      "destination": "/01_VastuCraft_Web_App/api/$1"
     },
     {
       "source": "/(.*)",
@@ -32,10 +34,6 @@
         {
           "key": "Strict-Transport-Security",
           "value": "max-age=63072000; includeSubDomains; preload"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=*, microphone=*, geolocation=()"
         }
       ]
     }
