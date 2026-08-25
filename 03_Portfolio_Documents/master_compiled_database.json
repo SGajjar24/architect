@@ -1,0 +1,782 @@
+{
+  "persons": {
+    "vidhi_gajjar": {
+      "full_name": "Ar. Vidhi Satishbhai Gajjar",
+      "aliases": [
+        "Vidhi S. Gajjar",
+        "Vidhi Gajjar"
+      ],
+      "profession": "Architect / Senior Architect / Certifying Architect of Record / Vastu Specialist",
+      "coa_registration": "CA/2018/103740",
+      "education": {
+        "degree": "Bachelor of Architecture (B.Arch)",
+        "institution": "Anant National University, Ahmedabad, Gujarat",
+        "years": "2013 – 2018",
+        "grade": "First Class with Distinction",
+        "design_philosophy": "Architecture that harmonizes with its surroundings, enriching lives and communities, balancing functionality, aesthetics, and social responsibility."
+      },
+      "work_experience": [
+        {
+          "role": "Senior Architect / Certifying Architect of Record",
+          "organization": "ADS Architect Pvt. Ltd. (India)",
+          "tenure": "May 2018 – Present (8+ years)",
+          "location": "Ahmedabad, Gujarat, India",
+          "scope": "Leading commercial and residential architectural planning, statutory RERA Form 1 compliance & project certification, multi-disciplinary structural coordination, building detailing, high-density residential towers and luxury villa layouts."
+        },
+        {
+          "role": "Junior Architect",
+          "organization": "Tatvam Designs",
+          "tenure": "Jan 2018 – May 2018 (5 months)",
+          "location": "Ahmedabad, Gujarat, India",
+          "scope": "Assisting in residential/commercial conceptual design, 3D modeling and visualization (SketchUp, V-Ray), construction documentation, sustainable design integration."
+        }
+      ],
+      "skills": [
+        "RERA Statutory Documentation & Form 1 Project Certification",
+        "Residential Towers & High-Density Housing Design",
+        "Luxury Bungalow & Plotted Villa Layouts",
+        "Commercial & Corporate Headquarters Design",
+        "Vastu Shastra Consultation & Space Harmonization",
+        "AutoCAD / AutoCAD Architecture",
+        "Autodesk Revit",
+        "Trimble SketchUp",
+        "Chaos V-Ray Rendering & Visualization",
+        "Interdisciplinary Consultant Coordination (Structural, MEP, Landscape)"
+      ],
+      "social_links": {
+        "linkedin": "https://www.linkedin.com/in/vidhi-gajjar-68038b285"
+      },
+      "statutory_registered_addresses": [
+        "A-24, Vishwakarma Vihar Society, Jodhpur Cross Road, Satellite, Ahmedabad – 380015",
+        "274 Manekbaug Society, Lane No. 22, Near Manekbaug Hall, Ambawadi, Ahmedabad",
+        "ADS Architect Pvt. Ltd., E-1002 Vishwanath Sarathya, Shela/Makarba, Ahmedabad"
+      ],
+      "statutory_emails": [
+        "design@adsapl.in"
+      ],
+      "statutory_phones": [
+        "+91 9429021118",
+        "+91 9104518311"
+      ]
+    },
+    "swetang_gajjar": {
+      "full_name": "Swetang Gajjar",
+      "profession": "Senior Software Engineer / AI & Smart Systems Lead",
+      "experience": "8+ years in Industrial Automation, AI/ML Model Development & Computer Vision",
+      "role_in_vastucraft": "Co-founder, AI & Smart Systems Lead",
+      "bio": "Transforms traditional construction into data-driven, intelligent environments. Specializes in edge AI, computer vision for on-site safety/quality compliance, smart building IoT, and cloud systems.",
+      "skills": [
+        "AI & Machine Learning Model Development (Gemini, Vision Transformers, PyTorch)",
+        "Industrial Automation & Computer Vision (PPE detection, defect detection, crack segmentation)",
+        "Smart Building IoT & Automation Systems",
+        "Full-Stack Web Architecture (React 19, TypeScript, Next.js, Node.js, Python, FastAPI)",
+        "Cloud Cost Optimization & Serverless Infrastructure"
+      ],
+      "social_links": {
+        "github": "https://github.com/SGajjar24"
+      }
+    }
+  },
+  "studio_vastucraft": {
+    "name": "VastuCraft AI Studio",
+    "tagline": "Vastu Shastra Meets AI Construction Technology",
+    "address": "Science City Road, Ahmedabad, Gujarat 380060",
+    "phone": "+91-9104518311",
+    "email": "hello@vastucraftai.com",
+    "social": {
+      "instagram": "https://www.instagram.com/vastucraftai",
+      "linkedin": "https://www.linkedin.com/company/vastucraftai",
+      "twitter": "https://twitter.com/vastucraftai"
+    },
+    "services": [
+      {
+        "title": "Architecture",
+        "desc": "Massing, planning, statutory approvals, RERA-ready documentation, and on-ground coordination."
+      },
+      {
+        "title": "Interior Design",
+        "desc": "Turnkey interiors for luxury homes, corporate offices, and lifestyle spaces."
+      },
+      {
+        "title": "Exterior & Facades",
+        "desc": "Facade concepts, elevation refinement, architectural lighting, and landscape."
+      },
+      {
+        "title": "AI Transformation",
+        "desc": "AI models for site safety (PPE detection), quality control, crack/defect analysis, and smart monitoring."
+      },
+      {
+        "title": "Construction & Execution",
+        "desc": "On-site execution oversight, vendor coordination, and structural quality checks."
+      },
+      {
+        "title": "Vastu Shastra Consultation",
+        "desc": "Layout audits, non-destructive remedies, directional energy alignment, and AI-assisted orientation checks."
+      }
+    ]
+  },
+  "projects_master_database": [
+    {
+      "project_name": "Nb Parva",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Nb Infracon LLP, Jivraj Park",
+      "construction_stage": "Foundation",
+      "gujrera_target": "Mar 2030",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/nb-parva-30819",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Enrise Glance",
+      "city": "Ahmedabad",
+      "typology": "Commercial",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Samipya Realty LLP, Makarba",
+      "construction_stage": "Framework",
+      "gujrera_target": "Mar 2029",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/enrise-glance-30733",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Brillia Nxt",
+      "city": "Ahmedabad",
+      "typology": "Commercial",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Nimi Buildwell LLP, Bodakdev",
+      "construction_stage": "Construction",
+      "gujrera_target": "Sep 2028",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/brillia-nxt-30708",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Nb Palm",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Nb Palm Realty LLP, Hebatpur Rd",
+      "construction_stage": "Shell Erection",
+      "gujrera_target": "Mar 2029",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/nb-palm-29358",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Dynamic Avyana",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Dynamic Corp., Naranpura",
+      "construction_stage": "Foundation Stage",
+      "gujrera_target": "Jun 2030",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/dynamic-avyana-28808",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Elite The Vision",
+      "city": "Ahmedabad",
+      "typology": "Commercial",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Shakti Corp., Jagatpur",
+      "construction_stage": "Foundation",
+      "gujrera_target": "Jun 2029",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/elite-the-vision-28147",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Shristii",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Shristi LLP, Makarba",
+      "construction_stage": "Early Infra",
+      "gujrera_target": "Dec 2030",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/shristii-27004",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Horizon",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Sarjak Developers, Bodakdev",
+      "construction_stage": "Deep Excavation",
+      "gujrera_target": "Dec 2030",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/horizon-25490",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Tanaaz",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Blue Realestate LLP, Sarkhej",
+      "construction_stage": "Active Const.",
+      "gujrera_target": "Mid 2029",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/tanaaz-24897",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Aaron Elinor 51",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Aaron Associates LLP, Sola",
+      "construction_stage": "Under Construction",
+      "gujrera_target": "Jul 2028",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/aaron-elinor-51-24896",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "The Western Oasis",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Madelief Constructions, Sanand",
+      "construction_stage": "Plot Layout",
+      "gujrera_target": "Dec 2028",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/the-western-oasis-23540",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Shyaswa Sarovar",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/shyaswa-sarovar-20957",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Swati 18",
+      "city": "Ahmedabad",
+      "typology": "Commercial",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Swatisandhya Procon, Thaltej",
+      "construction_stage": "Active Framing",
+      "gujrera_target": "Dec 2028",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/swati-18-19009",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Fortune Tricentre",
+      "city": "Gandhinagar",
+      "typology": "Commercial",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://gandhinagarpropertyexpo.gujrera.com/project/fortune-tricentre-31227",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Auxeria And Astrum",
+      "city": "Gandhinagar",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://gandhinagarpropertyexpo.gujrera.com/project/auxeria-and-astrum-28131",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Ekam",
+      "city": "Gandhinagar",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://gandhinagarpropertyexpo.gujrera.com/project/ekam-25980",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Texas Repose",
+      "city": "Gandhinagar",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://gandhinagarpropertyexpo.gujrera.com/project/texas-repose-23309",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "The Verity",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Shafalya Infra, Vejalpur",
+      "construction_stage": "Framework",
+      "gujrera_target": "Late 2028",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/the-verity-19228",
+      "flagship_case_study_available": true,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Eternity By Ratnaakar",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/eternity-by-ratnaakar-18946",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Super Shaligram",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/super-shaligram-18914",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Aavyan",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "Direct Team / Operational",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/aavyan-18650",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Spacelink",
+      "city": "Gandhinagar",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Spacelink Developers, Gandhinagar",
+      "construction_stage": "Concrete Pour",
+      "gujrera_target": "Dec 2027",
+      "public_verification_link": "https://gandhinagarpropertyexpo.gujrera.com/project/spacelink-18530",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Shilp North Sky",
+      "city": "GIFT City",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Practice Project Page",
+      "developer_and_microlocation": "Shilp Group, Gandhinagar Border",
+      "construction_stage": "Active Frame",
+      "gujrera_target": "Dec 2028",
+      "public_verification_link": "https://gandhinagarpropertyexpo.gujrera.com/project/shilp-north-sky-18765",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Practice Project Page"
+    },
+    {
+      "project_name": "Avadh Arkelia",
+      "city": "Surat",
+      "typology": "Commercial",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "GujRERA Project Portal",
+      "developer_and_microlocation": "Avadh Group, Vesu, Surat",
+      "construction_stage": "Skeleton Phase",
+      "gujrera_target": "Dec 2029",
+      "public_verification_link": "https://www.gujrera.com/p/avadh-arkelia-surat/",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - GujRERA Project Portal"
+    },
+    {
+      "project_name": "Shilp Serene",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "developer_and_microlocation": "Shilp Group, Shilaj",
+      "construction_stage": "Superstructure",
+      "gujrera_target": "Mar 2027",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA10737-020922",
+      "flagship_case_study_available": false,
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Shilp Residency",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "developer_and_microlocation": "Shilp Group, Gota",
+      "construction_stage": "Finishing Phase",
+      "gujrera_target": "Jun 2027",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA11096-291222",
+      "flagship_case_study_available": false,
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Vishwanath Sarathya West",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "developer_and_microlocation": "Vishwanath Infra, Makarba",
+      "construction_stage": "Slab Work",
+      "gujrera_target": "Dec 2027",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA10293-140522",
+      "flagship_case_study_available": false,
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Vrundavan Heights",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Vrundavan Group, Ahmedabad",
+      "construction_stage": "Structural Work",
+      "gujrera_target": "Mid 2028",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/vrundavan-heights-23368",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "The One",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "The One Promoters, Ahmedabad",
+      "construction_stage": "Finishes Stage",
+      "gujrera_target": "Jun 2027",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/the-one-30675",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Shaligram Arcade",
+      "city": "Ahmedabad",
+      "typology": "Commercial",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "developer_and_microlocation": "Shaligram Group, Ambli",
+      "construction_stage": "Fully Operational",
+      "gujrera_target": "Mar 2026",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-CAA08498-250521",
+      "flagship_case_study_available": false,
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Riviera Prestige",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "developer_and_microlocation": "Gujarat Urban Region",
+      "construction_stage": "RERA Registered",
+      "gujrera_target": "Public RERA Record",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA11120-311222",
+      "flagship_case_study_available": false,
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Shristii Savera",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page",
+      "developer_and_microlocation": "Shristi LLP, Makarba",
+      "construction_stage": "Early Infra",
+      "gujrera_target": "Dec 2030",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/shristii-27004",
+      "flagship_case_study_available": false,
+      "link_status": "Verified - Expo Verified Project Page"
+    },
+    {
+      "project_name": "Orchid Gold",
+      "city": "Ahmedabad",
+      "typology": "Mixed Development",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page (RERA: MAA12019)",
+      "developer_and_microlocation": "Galaxy Real Estate Developers Guj Pvt Ltd, Ahmedabad",
+      "construction_stage": "Active Construction / RERA Registered",
+      "gujrera_target": "PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/MAA12019/280623",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/orchid-gold-18998",
+      "flagship_case_study_available": false,
+      "notes": "Newly verified via GujRERA registration number PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/MAA12019/280623. Official Architect: Vidhi Satishbhai Gajjar (CA/2018/103740).",
+      "link_status": "Verified - Expo Verified Project Page (RERA: MAA12019)"
+    },
+    {
+      "project_name": "Anand Skylyf",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "developer_and_microlocation": "Anand Infra, Chandkheda, Ahmedabad",
+      "construction_stage": "Active Framework / Superstructure",
+      "gujrera_target": "Sep 2028",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA08074-180221",
+      "flagship_case_study_available": false,
+      "notes": "Form 1 Architect's Certificate on public record submitted under CA/2018/103740 for RERA fund withdrawals.",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Palash Homes",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "developer_and_microlocation": "Zaveri Infra / Shantipura, Sarkhej, Ahmedabad",
+      "construction_stage": "Active Construction",
+      "gujrera_target": "GujRERA Registered",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA10870-A1M-011123",
+      "flagship_case_study_available": false,
+      "notes": "Verified public RERA filing with Architect Vidhi Satishbhai Gajjar (CA/2018/103740).",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Shubham Anthem",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "Direct",
+      "portfolio_treatment": "Expo Verified Project Page (RERA: MAA11959)",
+      "developer_and_microlocation": "Shubham Group / Shela, Sarkhej, Ahmedabad",
+      "construction_stage": "Active Construction",
+      "gujrera_target": "GujRERA Registered",
+      "public_verification_link": "https://www.ahmedabadpropertyexpo.com/project/shubham-anthem-19011",
+      "flagship_case_study_available": false,
+      "notes": "Verified public RERA filing with Architect Vidhi Satishbhai Gajjar (CA/2018/103740).",
+      "link_status": "Verified - Expo Verified Project Page (RERA: MAA11959)"
+    },
+    {
+      "project_name": "Sahjanand S+",
+      "city": "Gandhinagar",
+      "typology": "Mixed Development",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-GANDHINAGAR-GANDHINAGAR-Others-MAA10934-161122",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Imperial Building",
+      "city": "Surendranagar",
+      "typology": "Commercial",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-SURENDRANAGAR-WADHWAN-Others-CAA11337-030323",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "S9 Imperial",
+      "city": "Palanpur",
+      "typology": "Commercial",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-BANASKANTHA-PALANPUR-Others-CAA11235-280223",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Viola",
+      "city": "Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-RAA07393-A2R-EX1-130426-311226",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Veritas",
+      "city": "Sola, Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://a2zproperty.in",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Shilp Business Gateway",
+      "city": "Ahmedabad",
+      "typology": "Commercial",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://aurumproptech.in",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "S9 Landmark",
+      "city": "Palanpur, Banaskantha",
+      "typology": "Commercial / Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://a2zproperty.in",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Antara",
+      "city": "Wadaj, Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://a2zproperty.in",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Sahajanand Swarg",
+      "city": "Vavol, Gandhinagar",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://a2zproperty.in",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Shoolin Square",
+      "city": "Unjha, Mehsana",
+      "typology": "Commercial / Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://a2zproperty.in",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "Shilp Ananta",
+      "city": "Shela, Ahmedabad",
+      "typology": "Residential",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://staticmb.com",
+      "link_status": "RERA Confirmed"
+    },
+    {
+      "project_name": "S9 Sarvoday",
+      "city": "Banaskantha",
+      "typology": "Residential / Commercial",
+      "evidence_tier": "RERA Statutory",
+      "portfolio_treatment": "Individual GujRERA Project Record",
+      "public_verification_link": "https://gujrera.com",
+      "link_status": "RERA Confirmed"
+    }
+  ],
+  "live_public_sources": [
+    [
+      "index.html",
+      "HOME"
+    ],
+    [
+      "projects.html",
+      "42 PROJECTS"
+    ],
+    [
+      "evidence.html",
+      "EVIDENCE"
+    ],
+    [
+      "experience.html",
+      "EXPERIENCE"
+    ],
+    [
+      "records.html",
+      "RECORDS"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+      "Ahmedabad licence-linked profile ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/architect/vidhi-s-gajjar",
+      "Alternate-name licence-linked profile ↗"
+    ],
+    [
+      "https://gandhinagarpropertyexpo.gujrera.com/architect/vidhi-satishbhai-gajjar",
+      "Gandhinagar licence-linked profile ↗"
+    ],
+    [
+      "https://gandhinagarpropertyexpo.gujrera.com/architect/ads-architect-pvt-ltd",
+      "ADS practice-linked profile ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/project/dynamic-avyana-28808",
+      "Dynamic Avyana — project team ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/project/horizon-25490",
+      "Horizon — project team ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/project/brillia-nxt-30708",
+      "Brillia Nxt — project team ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/project/the-western-oasis-23540",
+      "The Western Oasis — project team ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/project/shristii-27004",
+      "Shristii — project team ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/project/spacelink-18530",
+      "Spacelink — project team ↗"
+    ],
+    [
+      "https://www.ahmedabadpropertyexpo.com/project/the-verity-19228",
+      "The Verity — project team ↗"
+    ],
+    [
+      "https://gandhinagarpropertyexpo.gujrera.com/project/ekam-25980",
+      "Ekam — project team ↗"
+    ],
+    [
+      "https://gandhinagarpropertyexpo.gujrera.com/project/auxeria-and-astrum-28131",
+      "Auxeria And Astrum — project team ↗"
+    ],
+    [
+      "https://gandhinagarpropertyexpo.gujrera.com/project/shilp-north-sky-18765",
+      "Shilp North Sky — ADS practice record ↗"
+    ],
+    [
+      "https://www.gujrera.com/p/avadh-arkelia-surat/",
+      "Avadh Arkelia — separate public record ↗"
+    ]
+  ]
+}

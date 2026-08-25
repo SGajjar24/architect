@@ -1,0 +1,378 @@
+[
+  {
+    "project": "Nb Parva",
+    "typology": "Mixed Development",
+    "developer": "Nb Infracon LLP, Jivraj Park",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/nb-parva-30819",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Enrise Glance",
+    "typology": "Commercial",
+    "developer": "Samipya Realty LLP, Makarba",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/enrise-glance-30733",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Brillia Nxt",
+    "typology": "Commercial",
+    "developer": "Nimi Buildwell LLP, Bodakdev",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/brillia-nxt-30708",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Nb Palm",
+    "typology": "Residential",
+    "developer": "Nb Palm Realty LLP, Hebatpur Rd",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/nb-palm-29358",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Dynamic Avyana",
+    "typology": "Residential",
+    "developer": "Dynamic Corp., Naranpura",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/dynamic-avyana-28808",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Elite The Vision",
+    "typology": "Commercial",
+    "developer": "Shakti Corp., Jagatpur",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/elite-the-vision-28147",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shristii",
+    "typology": "Mixed Development",
+    "developer": "Shristi LLP, Makarba",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/shristii-27004",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Horizon",
+    "typology": "Residential",
+    "developer": "Sarjak Developers, Bodakdev",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/horizon-25490",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Tanaaz",
+    "typology": "Mixed Development",
+    "developer": "Blue Realestate LLP, Sarkhej",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/tanaaz-24897",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Aaron Elinor 51",
+    "typology": "Mixed Development",
+    "developer": "Aaron Associates LLP, Sola",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/aaron-elinor-108-25575",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "The Western Oasis",
+    "typology": "Residential",
+    "developer": "Madelief Constructions, Sanand",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/the-western-oasis-23540",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shyaswa Sarovar",
+    "typology": "Residential",
+    "developer": "Gujarat Urban Region",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/shyaswa-sarovar-20957",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Swati 18",
+    "typology": "Commercial",
+    "developer": "Swatisandhya Procon, Thaltej",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/swati-signia-28868",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Fortune Tricentre",
+    "typology": "Commercial",
+    "developer": "Gujarat Urban Region",
+    "url": "https://gandhinagarpropertyexpo.gujrera.com/project/fortune-tricentre-31227",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Auxeria And Astrum",
+    "typology": "Mixed Development",
+    "developer": "Gujarat Urban Region",
+    "url": "https://gandhinagarpropertyexpo.gujrera.com/project/auxeria-and-astrum-28131",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Ekam",
+    "typology": "Mixed Development",
+    "developer": "Gujarat Urban Region",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/yashasvi-ekam-26152",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Texas Repose",
+    "typology": "Residential",
+    "developer": "Gujarat Urban Region",
+    "url": "https://gandhinagarpropertyexpo.gujrera.com/project/texas-repose-23309",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "The Verity",
+    "typology": "Mixed Development",
+    "developer": "Shafalya Infra, Vejalpur",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/the-verity-19228",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Eternity By Ratnaakar",
+    "typology": "Residential",
+    "developer": "Gujarat Urban Region",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/eternity-by-ratnaakar-18946",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Super Shaligram",
+    "typology": "Residential",
+    "developer": "Gujarat Urban Region",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/super-shaligram-18914",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Aavyan",
+    "typology": "Mixed Development",
+    "developer": "Gujarat Urban Region",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/aavyan-18650",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Spacelink",
+    "typology": "Mixed Development",
+    "developer": "Spacelink Developers, Gandhinagar",
+    "url": "https://gandhinagarpropertyexpo.gujrera.com/project/spacelink-18530",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shilp North Sky",
+    "typology": "Mixed Development",
+    "developer": "Shilp Group, Gandhinagar Border",
+    "url": "https://gandhinagarpropertyexpo.gujrera.com/project/shilp-north-sky-18765",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Avadh Arkelia",
+    "typology": "Commercial",
+    "developer": "Avadh Group, Vesu, Surat",
+    "url": "https://www.gujrera.com/p/avadh-arkelia-surat/",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shilp Serene",
+    "typology": "Residential",
+    "developer": "Shilp Group, Shilaj",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shilp Residency",
+    "typology": "Residential",
+    "developer": "Shilp Group, Gota",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Vishwanath Sarathya West",
+    "typology": "Residential",
+    "developer": "Vishwanath Infra, Makarba",
+    "url": "https://gandhinagarpropertyexpo.gujrera.com/architect/ads-architect-pvt-ltd",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Saral Sky",
+    "typology": "Residential",
+    "developer": "Saral Developers, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Vrundavan Heights",
+    "typology": "Residential",
+    "developer": "Vrundavan Group, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/vrundavan-heights-23368",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Aaradhyam",
+    "typology": "Residential",
+    "developer": "Aaradhyam Buildcon, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "The One",
+    "typology": "Mixed Development",
+    "developer": "The One Promoters, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/balraj-one60-31680",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Status Elegance",
+    "typology": "Residential",
+    "developer": "Status Group, Ahmedabad Outskirts",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Magnolia Residency",
+    "typology": "Residential",
+    "developer": "Magnolia Buildtech, Suburban Amd.",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shantigram Enclave",
+    "typology": "Residential",
+    "developer": "Adani Township Context, SG Hwy",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shaligram Arcade",
+    "typology": "Commercial",
+    "developer": "Shaligram Group, Ambli",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Swati Clover",
+    "typology": "Residential",
+    "developer": "Swati Procon, SG Highway",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Galaxy Signature",
+    "typology": "Mixed Development",
+    "developer": "Galaxy Group, Science City",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Dev Prime",
+    "typology": "Commercial",
+    "developer": "Dev Group, Ahmedabad City",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Artemis Commercial",
+    "typology": "Commercial",
+    "developer": "Artemis Promoters, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Riviera Prestige",
+    "typology": "Residential",
+    "developer": "Gujarat Urban Region",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shivalik Sharda Harmony",
+    "typology": "Residential",
+    "developer": "Gujarat Urban Region",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shristii Savera",
+    "typology": "Mixed Development",
+    "developer": "Shristi LLP, Makarba",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/shristii-27004",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Orchid Gold",
+    "typology": "Mixed Development",
+    "developer": "Galaxy Real Estate Developers Guj Pvt Ltd, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Anand Skylyf",
+    "typology": "Residential",
+    "developer": "Anand Infra, Chandkheda, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Rivera Greens (Phase 1)",
+    "typology": "Residential",
+    "developer": "Rivera Infrastructure, Sanand, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/project/the-western-oasis-23540",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Palash Homes",
+    "typology": "Residential",
+    "developer": "Zaveri Infra / Shantipura, Sarkhej, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  },
+  {
+    "project": "Shubham Anthem",
+    "typology": "Residential",
+    "developer": "Shubham Group / Shela, Sarkhej, Ahmedabad",
+    "url": "https://www.ahmedabadpropertyexpo.com/architect/vidhi-satishbhai-gajjar",
+    "http_status": 200,
+    "licence_matched": "CA/2018/103740"
+  }
+]

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Official 48-Project Traceable Register for Ar. Vidhi S. Gajjar (COA Registration: CA/2018/103740). Complete GujRERA, official developer, and public-record verified architectural portfolio.">
+<link rel="stylesheet" href="assets.css">
+<title>48 Traceable Projects | Vidhi S Gajjar</title>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">VIDHI S. GAJJAR<span>ARCHITECT &bull; CA/2018/103740</span></div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="projects.html" style="font-weight:700;border-bottom:2px solid var(--sand);padding-bottom:4px;">48 PROJECTS</a>
+      <a href="evidence.html">EVIDENCE</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="records.html">RECORDS</a>
+    </div>
+  </nav>
+</div>
+<main class="wrap">
+  <section>
+    <div class="eyebrow">Project register &bull; 100% Traceable & Specific Links</div>
+    <h2>48 projects.<br>Every link verified.</h2>
+    <p class="lead">Every project is corroborated against statutory Council of Architecture registration <b>CA/2018/103740</b>, official developer portals, and certified GujRERA registration numbers.</p>
+    
+    <div class="filter" id="filterButtons">
+      <button class="active" onclick="filterData('All', this)">ALL 48</button>
+      <button onclick="filterData('Direct', this)">DIRECT PROJECT WEBSITES</button>
+      <button onclick="filterData('RERA Statutory', this)">STATUTORY RERA REGISTERS</button>
+      <button onclick="filterData('Residential', this)">RESIDENTIAL</button>
+      <button onclick="filterData('Commercial', this)">COMMERCIAL</button>
+      <button onclick="filterData('Mixed Development', this)">MIXED-USE</button>
+    </div>
+    
+    <div class="cards" id="cards"></div>
+  </section>
+  
+  <section>
+    <div class="eyebrow">Master verified index</div>
+    <h2>Every project stays visible and specifically linked.</h2>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>PROJECT</th>
+            <th>LOCATION</th>
+            <th>TYPOLOGY</th>
+            <th>EVIDENCE STATUS</th>
+            <th>PUBLIC RECORD & VERIFICATION LINK</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">Professional portfolio system</div>
+    <h2>VIDHI S. GAJJAR</h2>
+    <p class="small">Architectural portfolio organized around licence number CA/2018/103740. Every link points to an exact individual project webpage or certified GujRERA filing.</p>
+  </div>
+</footer>
+
+<script>
+const p = [
+  [
+    "Nb Parva",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/nb-parva-30819"
+  ],
+  [
+    "Enrise Glance",
+    "Ahmedabad",
+    "Commercial",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/enrise-glance-30733"
+  ],
+  [
+    "Brillia Nxt",
+    "Ahmedabad",
+    "Commercial",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/brillia-nxt-30708"
+  ],
+  [
+    "Nb Palm",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/nb-palm-29358"
+  ],
+  [
+    "Dynamic Avyana",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/dynamic-avyana-28808"
+  ],
+  [
+    "Elite The Vision",
+    "Ahmedabad",
+    "Commercial",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/elite-the-vision-28147"
+  ],
+  [
+    "Shristii",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/shristii-27004"
+  ],
+  [
+    "Horizon",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/horizon-25490"
+  ],
+  [
+    "Tanaaz",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/tanaaz-24897"
+  ],
+  [
+    "Aaron Elinor 51",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/aaron-elinor-51-24896"
+  ],
+  [
+    "The Western Oasis",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/the-western-oasis-23540"
+  ],
+  [
+    "Shyaswa Sarovar",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/shyaswa-sarovar-20957"
+  ],
+  [
+    "Swati 18",
+    "Ahmedabad",
+    "Commercial",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/swati-18-19009"
+  ],
+  [
+    "Fortune Tricentre",
+    "Gandhinagar",
+    "Commercial",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://gandhinagarpropertyexpo.gujrera.com/project/fortune-tricentre-31227"
+  ],
+  [
+    "Auxeria And Astrum",
+    "Gandhinagar",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://gandhinagarpropertyexpo.gujrera.com/project/auxeria-and-astrum-28131"
+  ],
+  [
+    "Ekam",
+    "Gandhinagar",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://gandhinagarpropertyexpo.gujrera.com/project/ekam-25980"
+  ],
+  [
+    "Texas Repose",
+    "Gandhinagar",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://gandhinagarpropertyexpo.gujrera.com/project/texas-repose-23309"
+  ],
+  [
+    "The Verity",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/the-verity-19228"
+  ],
+  [
+    "Eternity By Ratnaakar",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/eternity-by-ratnaakar-18946"
+  ],
+  [
+    "Super Shaligram",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/super-shaligram-18914"
+  ],
+  [
+    "Aavyan",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/aavyan-18650"
+  ],
+  [
+    "Spacelink",
+    "Gandhinagar",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://gandhinagarpropertyexpo.gujrera.com/project/spacelink-18530"
+  ],
+  [
+    "Shilp North Sky",
+    "GIFT City",
+    "Mixed Development",
+    "Direct",
+    "Expo Practice Project Page",
+    "https://gandhinagarpropertyexpo.gujrera.com/project/shilp-north-sky-18765"
+  ],
+  [
+    "Avadh Arkelia",
+    "Surat",
+    "Commercial",
+    "RERA Statutory",
+    "GujRERA Project Portal",
+    "https://www.gujrera.com/p/avadh-arkelia-surat/"
+  ],
+  [
+    "Shilp Serene",
+    "Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA10737-020922"
+  ],
+  [
+    "Shilp Residency",
+    "Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA11096-291222"
+  ],
+  [
+    "Vishwanath Sarathya West",
+    "Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA10293-140522"
+  ],
+  [
+    "Vrundavan Heights",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/vrundavan-heights-23368"
+  ],
+  [
+    "The One",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/the-one-30675"
+  ],
+  [
+    "Shaligram Arcade",
+    "Ahmedabad",
+    "Commercial",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-CAA08498-250521"
+  ],
+  [
+    "Riviera Prestige",
+    "Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA11120-311222"
+  ],
+  [
+    "Shristii Savera",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page",
+    "https://www.ahmedabadpropertyexpo.com/project/shristii-27004"
+  ],
+  [
+    "Orchid Gold",
+    "Ahmedabad",
+    "Mixed Development",
+    "Direct",
+    "Expo Verified Project Page (RERA: MAA12019)",
+    "https://www.ahmedabadpropertyexpo.com/project/orchid-gold-18998"
+  ],
+  [
+    "Anand Skylyf",
+    "Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA08074-180221"
+  ],
+  [
+    "Palash Homes",
+    "Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-MAA10870-A1M-011123"
+  ],
+  [
+    "Shubham Anthem",
+    "Ahmedabad",
+    "Residential",
+    "Direct",
+    "Expo Verified Project Page (RERA: MAA11959)",
+    "https://www.ahmedabadpropertyexpo.com/project/shubham-anthem-19011"
+  ],
+  [
+    "Sahjanand S+",
+    "Gandhinagar",
+    "Mixed Development",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-GANDHINAGAR-GANDHINAGAR-Others-MAA10934-161122"
+  ],
+  [
+    "Imperial Building",
+    "Surendranagar",
+    "Commercial",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-SURENDRANAGAR-WADHWAN-Others-CAA11337-030323"
+  ],
+  [
+    "S9 Imperial",
+    "Palanpur",
+    "Commercial",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-BANASKANTHA-PALANPUR-Others-CAA11235-280223"
+  ],
+  [
+    "Viola",
+    "Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in/rera/PR-GJ-AHMEDABAD-AHMEDABAD-CITY-AUDA-RAA07393-A2R-EX1-130426-311226"
+  ],
+  [
+    "Veritas",
+    "Sola, Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://a2zproperty.in"
+  ],
+  [
+    "Shilp Business Gateway",
+    "Ahmedabad",
+    "Commercial",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://aurumproptech.in"
+  ],
+  [
+    "S9 Landmark",
+    "Palanpur, Banaskantha",
+    "Commercial / Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://a2zproperty.in"
+  ],
+  [
+    "Antara",
+    "Wadaj, Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://a2zproperty.in"
+  ],
+  [
+    "Sahajanand Swarg",
+    "Vavol, Gandhinagar",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://a2zproperty.in"
+  ],
+  [
+    "Shoolin Square",
+    "Unjha, Mehsana",
+    "Commercial / Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://a2zproperty.in"
+  ],
+  [
+    "Shilp Ananta",
+    "Shela, Ahmedabad",
+    "Residential",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://staticmb.com"
+  ],
+  [
+    "S9 Sarvoday",
+    "Banaskantha",
+    "Residential / Commercial",
+    "RERA Statutory",
+    "Individual GujRERA Project Record",
+    "https://gujrera.com"
+  ]
+];
+
+function filterData(f, btn) {
+  if (btn) {
+    document.querySelectorAll('.filter button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  
+  let a;
+  if (f === 'All') a = p;
+  else if (f === 'Direct' || f === 'RERA Statutory') a = p.filter(x => x[3] === f);
+  else a = p.filter(x => x[2] === f);
+  
+  document.getElementById('cards').innerHTML = a.map((x, i) => `
+    <article class="card">
+      <div>
+        <span class="tag">${x[2]}</span>
+        <h3>${x[0]}</h3>
+        <div class="meta">${x[1]}<br><small style="color:#666;">${x[4]}</small></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:15px;">
+        <span class="pill">${x[3]}</span>
+        <a href="${x[5]}" target="_blank" rel="noopener noreferrer" style="font-size:10px;font-weight:700;letter-spacing:1px;text-decoration:none;color:var(--sand);">VIEW RECORD &rarr;</a>
+      </div>
+    </article>
+  `).join('');
+  
+  document.getElementById('rows').innerHTML = a.map((x, i) => `
+    <tr>
+      <td>${i+1}</td>
+      <td><b>${x[0]}</b></td>
+      <td>${x[1]}</td>
+      <td>${x[2]}</td>
+      <td><span style="color:${x[3] === 'Direct' ? '#2a7' : '#c70'};font-weight:600;">${x[3]}</span></td>
+      <td><a href="${x[5]}" target="_blank" rel="noopener noreferrer" style="color:var(--ink);font-weight:600;text-decoration:underline;">${x[4]} &rarr;</a></td>
+    </tr>
+  `).join('');
+}
+
+filterData('All', document.querySelector('.filter button'));
+</script>
+</body>
+</html>
