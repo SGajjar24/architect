@@ -1,25 +1,84 @@
-# VIDHI — Architectural Practice & Digital Studio
+# VastuCraft AI Studio 🏗️✨
 
-Welcome to the **VIDHI** project workspace. This repository contains the complete portfolio, digital assets, and web applications for **Ar. Vidhi S. Gajjar** (COA Registration: `CA/2018/103740`).
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://betaversion1.vercel.app/)
+[![License](https://img.shields.io/badge/license-MIT-purple.svg)](LICENSE)
 
----
-
-## 📂 Folder Guide
-
-1. **[`01_VastuCraft_Web_App/`](./01_VastuCraft_Web_App)**  
-   Full-stack React 19 + TypeScript + Vite web application for VastuCraft AI Studio, featuring an interactive 48-project 3D explorer, Gemini 2.5 Flash Vastu intelligence, AI construction monitoring previews, and 3D tilt perspective showcases.  
-   - Run: `cd 01_VastuCraft_Web_App && npm install && npm run dev`
-
-2. **[`02_Evidence_Website_Static/`](./02_Evidence_Website_Static)**  
-   Lightweight, high-performance static website hosting the 48-project evidence register, statutory methodology breakdown, and live public GujRERA / Form 1 source verification links.  
-   - Open: `02_Evidence_Website_Static/index.html` in any modern browser.
-
-3. **[`03_Portfolio_Documents/`](./03_Portfolio_Documents)**  
-   Contains the master 48-project compiled database (`master_compiled_database.json`), the 17-page curated presentation document (`.docx` & `.pdf`), and the detailed RERA status index.
-
-4. **[`04_Identity_and_Credentials/`](./04_Identity_and_Credentials)**  
-   Official credentials, LinkedIn verification snapshots, and statutory licensing references.
+> **Where Ancient Wisdom Meets Future Tech.**
+> A modern React application for a hybrid architecture studio that blends Vastu Shastra principles with AI-driven construction monitoring.
 
 ---
 
-For architectural governance, audit history, and technical details, see [`PROJECT.md`](./PROJECT.md).
+## 📖 Documentation
+
+We have prepared detailed documentation for developers and content managers:
+
+*   👉 **[User & Developer Guide](docs/USER_GUIDE.md)**: Includes diagrams, customization instructions (Logo, Images, Colors), and API setup.
+
+---
+
+## 🌟 Key Features
+
+### 🏛️ Architectural Excellence
+- **Portfolio Showcase**: Filterable gallery of high-resolution project images.
+- **Service Breakdowns**: Detailed pages for Architecture, Interior Design, and Facade works.
+
+### 🔮 Vastu Shastra Integration
+- **Educational Content**: Interactive 5-Elements guide.
+- **AI-Powered Chat**: Integrated **Gemini 2.5 Flash** chatbot via secure serverless proxy.
+
+### 🤖 AI Construction Tech
+- **Computer Vision Demos**: Visualization of safety gear detection (PPE) and defect analysis.
+- **Performance**: Optimized with Vite manual chunking for fast load times.
+
+---
+
+## 🚀 Quick Start
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/vastucraft-ai.git
+    cd vastucraft-ai
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Setup**
+    Create a `.env` file:
+    ```env
+    # For Local Dev (Serverless functions require Vercel CLI or similar proxy locally)
+    API_KEY=your_gemini_key
+    VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_key
+    ```
+
+4.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 📦 Deployment
+
+This project is optimized for **Vercel**.
+
+1.  Connect your repository to Vercel.
+2.  Add Environment Variables in the Vercel Dashboard.
+3.  Deploy.
+
+See [docs/USER_GUIDE.md](docs/USER_GUIDE.md) for full deployment details.
+
+---
+
+## 🛡️ Security
+
+*   **Headers**: Security headers configured in `vercel.json`.
+*   **API Security**: The Chatbot API key is never exposed to the client; it lives in a serverless function (`api/chat.js`).
+*   **Bot Protection**: `robots.txt` is configured to allow SEO bots but block AI scrapers.
+
+---
+
+© 2024 VastuCraft AI Studio. All Rights Reserved.
