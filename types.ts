@@ -25,6 +25,7 @@ export interface Project {
   linkStatus?: string;
   flagship?: boolean;
   coaRegistration?: string;
+  reraNumber?: string;
 }
 
 export interface TeamMember {
