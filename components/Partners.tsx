@@ -219,6 +219,9 @@ export const Partners: React.FC = () => {
                   Region:
                 </span>
                 <select
+                  id="city-filter"
+                  name="cityFilter"
+                  aria-label="Filter by region or city"
                   value={selectedCity}
                   onChange={(e) => setSelectedCity(e.target.value)}
                   className="px-3 py-1.5 rounded-xl bg-slate-950 border border-white/10 text-xs font-mono text-slate-200 focus:outline-none focus:border-amber-500"
