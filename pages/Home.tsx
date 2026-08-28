@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStudio } from '../context/StudioContext';
-import ThreeArchitectureScene from '../components/ThreeArchitectureScene';
+import HeroCinematicReel from '../components/HeroCinematicReel';
 import Card3D from '../components/Card3D';
 import Reveal from '../components/Reveal';
 import { ALL_VERIFIED_PROJECTS } from '../data/projectsData';
@@ -31,13 +31,11 @@ export const Home: React.FC = () => {
   return (
     <div className={`min-h-screen ${isBlueprintMode ? 'bg-slate-950 text-cyan-50' : 'bg-slate-950 text-slate-100'}`}>
       
-      {/* 1. HERO SECTION WITH THREE.JS PARAMETRIC SCENE */}
+      {/* 1. HERO SECTION WITH CINEMATIC ARCHITECTURAL FILM REEL */}
       <section className="relative h-screen min-h-[750px] flex items-center justify-center overflow-hidden pt-20">
         
-        {/* Fullscreen Three.js WebGL 3D Architectural Scene */}
-        <div className="absolute inset-0 z-0">
-          <ThreeArchitectureScene height="100%" />
-        </div>
+        {/* Fullscreen Architectural Story Cinematic Reel */}
+        <HeroCinematicReel />
 
         {/* Ambient Vignette & Text Readability Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none" />

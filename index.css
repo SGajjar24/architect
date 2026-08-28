@@ -58,9 +58,4 @@ body {
   transform-style: preserve-3d;
 }
 
-/* Hide default cursor on fine pointers globally */
-@media (pointer: fine) { 
-  * { 
-    cursor: none !important; 
-  } 
-}
+
