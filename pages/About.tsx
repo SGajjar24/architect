@@ -50,11 +50,11 @@ export const About: React.FC = () => {
             <div className="lg:col-span-5 space-y-4">
               <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-950">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
-                  alt="Studio Vidhi Gajjar Architectural Execution"
-                  className="w-full h-full object-cover"
+                  src="/images/vidhi_portrait.jpg"
+                  alt="Ar. Vidhi Satishbhai Gajjar - Principal Architect"
+                  className="w-full h-full object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                 
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/90 text-slate-950 text-xs font-mono font-bold mb-2">
@@ -175,11 +175,11 @@ export const About: React.FC = () => {
             <div className="lg:col-span-5 lg:order-last space-y-4">
               <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-950">
                 <img
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1200"
-                  alt="Computational Intelligence & Site AI"
-                  className="w-full h-full object-cover"
+                  src="/images/swetang_portrait.jpg"
+                  alt="Swetang Gajjar - Computational Intelligence & AI Systems"
+                  className="w-full h-full object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                 
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/90 text-slate-950 text-xs font-mono font-bold mb-2">

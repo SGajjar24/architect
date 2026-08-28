@@ -13,8 +13,8 @@ const FALLBACK_SWETANG = 'https://images.unsplash.com/photo-1556157382-97eda2d62
 
 export const IMAGES = {
   // TEAM PHOTOS (Recommended: 800x800px, 1:1 Aspect Ratio)
-  VIDHI: '/vidhi.jpg', 
-  SWETANG: '/swetang.jpg',
+  VIDHI: '/images/vidhi_portrait.jpg', 
+  SWETANG: '/images/swetang_portrait.jpg',
   FALLBACK_VIDHI,
   FALLBACK_SWETANG,
 
