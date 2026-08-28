@@ -1,19 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Reveal from '../components/Reveal';
-import Card3D from '../components/Card3D';
-import { 
-  Building2, 
-  ShieldCheck, 
-  Layers, 
-  Compass, 
-  Cpu, 
-  Award, 
-  ArrowRight, 
-  Sparkles, 
-  CheckCircle2, 
-  FileText 
-} from 'lucide-react';
+import { Building2, ShieldCheck, Layers, Compass, Cpu, Award, ArrowRight, Sparkles, CheckCircle2, FileText } from 'lucide-react';
+import MagneticButton from '../components/MagneticButton';
 
 export const Practice: React.FC = () => {
   const navigate = useNavigate();
@@ -194,15 +183,18 @@ export const Practice: React.FC = () => {
             <h2 className="text-2xl font-serif font-bold text-white">
               Institutional Partnerships & Inquiries
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed mb-6">
               We collaborate with developers, private clients, and engineering consultants across Gujarat for new developments and statutory project certifications.
             </p>
-            <button
-              onClick={() => navigate('/contact')}
-              className="px-8 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs font-mono uppercase tracking-wider transition-all shadow-lg"
-            >
-              Initiate Project Dialogue &rarr;
-            </button>
+            <div className="flex justify-center mt-6">
+              <MagneticButton
+                onClick={() => navigate('/contact')}
+                className="px-8 py-3.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs font-mono uppercase tracking-wider shadow-lg mx-auto"
+                strength={15}
+              >
+                Initiate Project Dialogue &rarr;
+              </MagneticButton>
+            </div>
           </div>
         </Reveal>
       </div>
@@ -212,3 +204,5 @@ export const Practice: React.FC = () => {
 };
 
 export default Practice;
+
+

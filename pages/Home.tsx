@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 
 import { Partners } from '../components/Partners';
+import { MagneticButton } from '../components/MagneticButton';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -67,20 +68,22 @@ export const Home: React.FC = () => {
 
           <Reveal variant="fade-up" delay={550}>
             <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
-              <button
+              <MagneticButton
                 onClick={() => navigate('/portfolio')}
-                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-xs uppercase tracking-widest transition-all shadow-xl shadow-amber-900/30 hover:scale-102 flex items-center justify-center gap-2"
+                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-xs uppercase tracking-widest shadow-xl shadow-amber-900/30 w-full sm:w-auto"
+                strength={20}
               >
                 <span>Explore 48 Projects Register</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </MagneticButton>
 
-              <button
+              <MagneticButton
                 onClick={() => navigate('/practice')}
-                className="px-8 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white border border-white/10 font-semibold text-xs uppercase tracking-widest backdrop-blur-md transition-all"
+                className="px-8 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white border border-white/10 font-semibold text-xs uppercase tracking-widest backdrop-blur-md w-full sm:w-auto"
+                strength={15}
               >
                 Studio Philosophy
-              </button>
+              </MagneticButton>
             </div>
           </Reveal>
         </div>

@@ -13,14 +13,16 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import ScrollToTop from './components/ScrollToTop';
 import BackToTopButton from './components/BackToTopButton';
+import CustomCursor from './components/CustomCursor';
 
 export const App: React.FC = () => {
   return (
     <StudioProvider>
       <BrowserRouter>
         <ScrollToTop />
+        <CustomCursor />
         <BlueprintOverlay />
-        <div className="flex flex-col min-h-screen bg-slate-950 font-sans text-slate-100 antialiased selection:bg-amber-600 selection:text-white">
+        <div className="flex flex-col min-h-screen bg-slate-950 font-sans text-slate-100 antialiased selection:bg-amber-600 selection:text-white cursor-none sm:cursor-none">
           <Navbar />
           <main className="flex-grow">
             <Routes>

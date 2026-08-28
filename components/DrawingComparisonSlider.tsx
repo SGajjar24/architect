@@ -105,17 +105,16 @@ export const DrawingComparisonSlider: React.FC<DrawingComparisonSliderProps> = (
 
       {/* 3. INTERACTIVE SLIDER DIVIDER BAR */}
       <div
-        className="absolute top-0 bottom-0 z-20 w-1 bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.8)] cursor-ew-resize"
+        className="absolute top-0 bottom-0 z-20 w-px bg-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.6)] cursor-ew-resize flex items-center justify-center group hover:bg-amber-300 transition-colors"
         style={{ left: `${sliderPosition}%` }}
         onMouseDown={() => setIsDragging(true)}
         onTouchStart={() => setIsDragging(true)}
       >
-        {/* Center Drag Handle Button */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 border-2 border-amber-400 text-amber-300 shadow-xl">
-          <div className="flex gap-0.5 text-[10px] font-bold">
-            <span>&lsaquo;</span>
-            <span>&rsaquo;</span>
-          </div>
+        {/* Sleek Architect Drag Handle */}
+        <div className="absolute flex h-14 w-1.5 flex-col items-center justify-center gap-1 rounded-full bg-amber-400/20 backdrop-blur-md border border-amber-400/50 shadow-2xl group-hover:scale-y-110 group-hover:bg-amber-400/40 transition-all">
+          <div className="h-1.5 w-0.5 rounded-full bg-amber-200"></div>
+          <div className="h-1.5 w-0.5 rounded-full bg-amber-200"></div>
+          <div className="h-1.5 w-0.5 rounded-full bg-amber-200"></div>
         </div>
       </div>
     </div>

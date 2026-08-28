@@ -61,6 +61,16 @@
     </script>
   </head>
   <body class="bg-slate-950 text-slate-100 selection:bg-amber-600 selection:text-white">
+    <!-- Artistic Grain Texture Overlay -->
+    <div class="pointer-events-none fixed inset-0 z-[9999] opacity-[0.035] mix-blend-overlay">
+      <svg width="100%" height="100%">
+        <filter id="noise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noise)" />
+      </svg>
+    </div>
+    
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
