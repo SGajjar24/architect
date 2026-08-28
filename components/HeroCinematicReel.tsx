@@ -165,104 +165,104 @@ export const HeroCinematicReel: React.FC = () => {
       />
 
       {/* 3. TECHNICAL HUD & STORY CHAPTER CONTROLS (BOTTOM BAR) */}
-      <div className="absolute bottom-6 left-6 right-6 z-20 hidden sm:flex items-end justify-between pointer-events-auto">
-        
-        {/* Left: Active Story HUD Caption */}
-        <div className="max-w-md p-4 rounded-2xl bg-slate-950/70 border border-white/10 backdrop-blur-xl space-y-1 shadow-2xl">
-          <div className="flex items-center gap-2">
-            <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
-            <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-300">
-              ARCH-REEL // CHAPTER {activeStory.number} &bull; {activeStory.category}
-            </span>
+      <div className="absolute bottom-6 left-0 right-0 z-20 hidden sm:block pointer-events-auto">
+        <div className="max-w-7xl mx-auto px-6 flex items-end justify-between">
+          {/* Left: Active Story HUD Caption */}
+          <div className="max-w-md p-4 rounded-2xl bg-slate-950/70 border border-white/10 backdrop-blur-xl space-y-1 shadow-2xl">
+            <div className="flex items-center gap-2">
+              <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-300">
+                ARCH-REEL // CHAPTER {activeStory.number} &bull; {activeStory.category}
+              </span>
+            </div>
+            <div className="text-xs font-serif font-bold text-white tracking-tight">
+              {activeStory.title}
+            </div>
+            <div className="text-[11px] text-slate-400 font-sans line-clamp-1">
+              {activeStory.location}
+            </div>
           </div>
-          <div className="text-xs font-serif font-bold text-white tracking-tight">
-            {activeStory.title}
-          </div>
-          <div className="text-[11px] text-slate-400 font-sans line-clamp-1">
-            {activeStory.location}
+
+          {/* Right: Chapter Switcher & Play/Pause Controls */}
+          <div className="flex items-center gap-2 p-2 rounded-2xl bg-slate-950/80 border border-white/10 backdrop-blur-xl shadow-2xl">
+            {/* Chapter Buttons */}
+            <div className="flex items-center gap-1">
+              {STORY_CHAPTERS.map((story, i) => {
+                const isSelected = i === currentIdx;
+                return (
+                  <button
+                    key={story.id}
+                    onClick={() => handleSelectChapter(i)}
+                    className={`relative px-3 py-2 rounded-xl text-xs font-mono transition-all flex items-center gap-2 ${
+                      isSelected
+                        ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold'
+                        : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
+                    }`}
+                  >
+                    <span>{story.number}</span>
+                    <span className="hidden md:inline text-[11px]">{story.id.split('-')[0].toUpperCase()}</span>
+                    
+                    {/* Progress fill line on active chapter button */}
+                    {isSelected && isPlaying && (
+                      <div 
+                        className="absolute bottom-0 left-0 h-0.5 bg-amber-400 rounded-full transition-all duration-75"
+                        style={{ width: `${progress}%` }}
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="h-4 w-px bg-white/10 mx-1" />
+
+            {/* Prev / Next & Play / Pause */}
+            <div className="flex items-center gap-1">
+              <button
+                onClick={handlePrev}
+                aria-label="Previous Chapter"
+                className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+              </button>
+
+              <button
+                onClick={() => setIsPlaying(!isPlaying)}
+                aria-label={isPlaying ? "Pause Story Reel" : "Play Story Reel"}
+                className="p-2 rounded-lg text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 transition-colors"
+              >
+                {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+              </button>
+
+              <button
+                onClick={handleNext}
+                aria-label="Next Chapter"
+                className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         </div>
-
-        {/* Right: Chapter Switcher & Play/Pause Controls */}
-        <div className="flex items-center gap-2 p-2 rounded-2xl bg-slate-950/80 border border-white/10 backdrop-blur-xl shadow-2xl">
-          
-          {/* Chapter Buttons */}
-          <div className="flex items-center gap-1">
-            {STORY_CHAPTERS.map((story, i) => {
-              const isSelected = i === currentIdx;
-              return (
-                <button
-                  key={story.id}
-                  onClick={() => handleSelectChapter(i)}
-                  className={`relative px-3 py-2 rounded-xl text-xs font-mono transition-all flex items-center gap-2 ${
-                    isSelected
-                      ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold'
-                      : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
-                  }`}
-                >
-                  <span>{story.number}</span>
-                  <span className="hidden md:inline text-[11px]">{story.id.split('-')[0].toUpperCase()}</span>
-                  
-                  {/* Progress fill line on active chapter button */}
-                  {isSelected && isPlaying && (
-                    <div 
-                      className="absolute bottom-0 left-0 h-0.5 bg-amber-400 rounded-full transition-all duration-75"
-                      style={{ width: `${progress}%` }}
-                    />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-
-          <div className="h-4 w-px bg-white/10 mx-1" />
-
-          {/* Prev / Next & Play / Pause */}
-          <div className="flex items-center gap-1">
-            <button
-              onClick={handlePrev}
-              aria-label="Previous Chapter"
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-            >
-              <ChevronLeft className="w-3.5 h-3.5" />
-            </button>
-
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              aria-label={isPlaying ? "Pause Story Reel" : "Play Story Reel"}
-              className="p-2 rounded-lg text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 transition-colors"
-            >
-              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-            </button>
-
-            <button
-              onClick={handleNext}
-              aria-label="Next Chapter"
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-            >
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
-
-        </div>
-
       </div>
 
       {/* Mobile-Friendly Chapter Progress Bar on Top */}
-      <div className="absolute top-20 left-6 right-6 z-20 sm:hidden flex gap-1.5">
-        {STORY_CHAPTERS.map((_, i) => (
-          <div 
-            key={i} 
-            className="flex-1 h-1 rounded-full bg-white/20 overflow-hidden"
-          >
+      <div className="absolute top-24 left-0 right-0 z-20 sm:hidden">
+        <div className="max-w-7xl mx-auto px-6 flex gap-1.5">
+          {STORY_CHAPTERS.map((_, i) => (
             <div 
-              className={`h-full bg-amber-400 transition-all ${
-                i === currentIdx ? 'duration-75' : i < currentIdx ? 'w-full' : 'w-0'
-              }`}
-              style={{ width: i === currentIdx ? `${progress}%` : i < currentIdx ? '100%' : '0%' }}
-            />
-          </div>
-        ))}
+              key={i} 
+              className="flex-1 h-1 rounded-full bg-white/20 overflow-hidden"
+            >
+              <div 
+                className={`h-full bg-amber-400 transition-all ${
+                  i === currentIdx ? 'duration-75' : i < currentIdx ? 'w-full' : 'w-0'
+                }`}
+                style={{ width: i === currentIdx ? `${progress}%` : i < currentIdx ? '100%' : '0%' }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
     </div>

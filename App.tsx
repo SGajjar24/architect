@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { StudioProvider } from './context/StudioContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import BlueprintOverlay from './components/BlueprintOverlay';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Practice from './pages/Practice';
@@ -19,7 +18,6 @@ export const App: React.FC = () => {
     <StudioProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <BlueprintOverlay />
         <div className="flex flex-col min-h-screen bg-slate-950 font-sans text-slate-100 antialiased selection:bg-amber-600 selection:text-white">
           <Navbar />
           <main className="flex-grow">

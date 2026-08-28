@@ -97,7 +97,7 @@ export const Home: React.FC = () => {
             ].map((stat, i) => (
               <div 
                 key={i} 
-                className="flex flex-col items-center sm:items-start text-center sm:text-left py-2 px-4 border-l border-white/5 first:border-l-0"
+                className="flex flex-col items-center sm:items-start text-center sm:text-left py-2 px-4 lg:first:pl-0 lg:last:pr-0 border-l border-white/5 first:border-l-0"
               >
                 <div className="text-3xl sm:text-4xl font-serif font-bold text-amber-300 tracking-tight">
                   {stat.value}

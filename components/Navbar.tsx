@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-4 sm:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-4 sm:px-6">
       <div
         className={`max-w-7xl mx-auto rounded-2xl transition-all duration-500 px-6 py-3.5 flex items-center justify-between ${
           isScrolled || isMobileMenuOpen
@@ -79,24 +79,10 @@ export const Navbar: React.FC = () => {
 
         {/* Actions Toolbar */}
         <div className="hidden sm:flex items-center gap-3">
-          {/* Blueprint CAD Mode Switcher */}
-          <button
-            onClick={toggleBlueprintMode}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all border ${
-              isBlueprintMode
-                ? 'bg-cyan-950 border-cyan-400 text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.4)]'
-                : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:bg-white/10'
-            }`}
-            title="Toggle Technical Architectural CAD Grid"
-          >
-            <Grid className={`w-3.5 h-3.5 ${isBlueprintMode ? 'text-cyan-400 animate-pulse' : ''}`} />
-            <span>{isBlueprintMode ? 'CAD: ON' : 'CAD GRID'}</span>
-          </button>
-
           {/* Consultation CTA Button */}
           <Link
             to="/contact"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white text-xs font-semibold tracking-wide transition-all shadow-md shadow-amber-900/30 hover:scale-102 focus:outline-none"
+            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white text-xs font-semibold tracking-wide transition-all shadow-md shadow-amber-900/30 hover:scale-102 focus:outline-none"
           >
             <span>Commission Project</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -104,18 +90,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex sm:hidden items-center gap-2">
-          <button
-            onClick={toggleBlueprintMode}
-            className={`p-2 rounded-lg border text-xs font-mono ${
-              isBlueprintMode
-                ? 'bg-cyan-950 border-cyan-400 text-cyan-300'
-                : 'bg-white/5 border-white/10 text-slate-400'
-            }`}
-          >
-            <Grid className="w-4 h-4" />
-          </button>
-
+        <div className="flex sm:hidden items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 rounded-xl bg-white/5 text-white hover:bg-white/10 transition-colors"
