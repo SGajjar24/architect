@@ -1,0 +1,72 @@
+{
+  "id": "45",
+  "slug": "45-sahajanand-swarg",
+  "title": "Sahajanand Swarg",
+  "category": "Residential",
+  "typology": "Residential Apartments (224 Units)",
+  "city": "Gandhinagar",
+  "location": "Vavol, Gandhinagar",
+  "developer": "Akshar Prime Infracon",
+  "description": "Multi-tower residential community with 224 apartments and dedicated central recreation park.",
+  "imageUrl": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1000",
+  "constructionStage": "Under Construction",
+  "verificationLink": "https://gujrera.gujarat.gov.in/",
+  "linkStatus": "Official GujRERA Search",
+  "coaRegistration": "CA/2018/103740",
+  "reraNumber": "PR/GJ/GANDHINAGAR/GANDHINAGAR/Others/RAA10883/111122",
+  "specifications": {
+    "totalFloors": "1B/2B + Stilt/Ground + 12 to 14 Floors",
+    "totalUnits": "110 to 240 Units",
+    "plotArea": "2,800 \u2013 6,200 sq. yards",
+    "builtUpArea": "120,000 \u2013 260,000 sq.ft.",
+    "structuralSystem": "Earthquake-resistant RCC framed structure compliant with IS 456:2000 and IS 1893:2016 Seismic Zone III standards with high-grade Fe550D TMT rebars and M30/M35 design mix concrete.",
+    "unitMix": [
+      "2 BHK Smart Urban Homes (1,150 \u2013 1,350 sq.ft.)",
+      "3 BHK Spacious Family Residences (1,600 \u2013 1,950 sq.ft.)",
+      "3 BHK + Work Studio (2,100 sq.ft.)"
+    ],
+    "vastuHighlights": [
+      "North & North-East main door alignments optimizing ambient morning solar intake",
+      "Agni corner (South-East) dedicated kitchen zones with natural cross-ventilation",
+      "Water bodies and borewell / underground water tanks placed in North-East (Ishanya) zone",
+      "Living-dining hall orientation oriented to capture prevalent South-West summer breezes"
+    ],
+    "amenitiesList": [
+      "Centrally landscaped green garden with gazebo sit-outs",
+      "Children safe play zone with rubberized flooring",
+      "Multi-purpose community banquet hall & indoor games arena",
+      "Jogging track along the landscaped perimeter green buffer",
+      "24/7 CCTV surveillance with boom barriers and access control"
+    ]
+  },
+  "floorPlans": [
+    {
+      "title": "Typical Floor Core & Circulation Layout",
+      "type": "Floor Plate Plan",
+      "area": "8,500 \u2013 14,000 sq.ft. per floor",
+      "description": "Optimized 4-to-6 units per floor layout with central elevator core, dual fire escape staircases, wide 6-foot corridors, and dedicated service shafts ensuring zero cross-visibility between unit entries."
+    },
+    {
+      "title": "3 BHK Master Residence Plan",
+      "type": "Unit Layout Plan",
+      "area": "1,650 \u2013 2,250 sq.ft. Super Built-up",
+      "description": "Generous 18x12 ft living area opening into a 6-foot wide cantilevered deck, separate dining zone, master bedroom with walk-in closet & ensuite bath, secondary bedrooms with external window bays, and utility wash yard."
+    },
+    {
+      "title": "2 BHK Urban Living Layout",
+      "type": "Unit Layout Plan",
+      "area": "1,180 \u2013 1,380 sq.ft. Super Built-up",
+      "description": "Zero dead-space modular configuration maximizing carpet efficiency, open-concept living-dining, modular kitchen with attached utility balcony, and dual cross-ventilated bedrooms."
+    },
+    {
+      "title": "Basement & Stilt Parking Master Plan",
+      "type": "Parking & Services Plan",
+      "area": "25,000 \u2013 50,000 sq.ft. per level",
+      "description": "Two-way 6-metre wide vehicular driveway, demarcated car bays with column protectors, EV charging points, rainwater collection sumps, and mechanical ventilation exhaust shafts."
+    }
+  ],
+  "engineerName": "Dhruv Sompura / Associated Structural Engineers",
+  "developerContact": "+91 94290 21118",
+  "developerEntity": "Akshar Prime Infracon",
+  "exactAddress": "Vavol, Gandhinagar"
+}

@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { ALL_VERIFIED_PROJECTS, PROJECT_STATISTICS } from '../data/projectsData';
 import { Project } from '../types';
 import Reveal from '../components/Reveal';
@@ -16,18 +17,30 @@ import {
   Building, 
   Award, 
   CheckCircle2, 
-  Layers,
-  Sparkles,
-  Navigation
+  Layers, 
+  Sparkles, 
+  Navigation,
+  X
 } from 'lucide-react';
 
 export const Portfolio: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const developerParam = searchParams.get('developer') || '';
+
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedCity, setSelectedCity] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [selectedDeveloper, setSelectedDeveloper] = useState<string>(developerParam);
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const { isBlueprintMode } = useStudio();
+
+  useEffect(() => {
+    if (developerParam) {
+      setSelectedDeveloper(developerParam);
+      window.scrollTo({ top: 350, behavior: 'smooth' });
+    }
+  }, [developerParam]);
 
   const categories = ['All', 'Residential', 'Commercial', 'Mixed Development'];
 
@@ -43,6 +56,11 @@ export const Portfolio: React.FC = () => {
         selectedCity === 'All' || 
         project.city.toLowerCase().includes(selectedCity.toLowerCase());
 
+      const matchesDeveloper = 
+        !selectedDeveloper ||
+        (project.developer && project.developer.toLowerCase().includes(selectedDeveloper.toLowerCase())) ||
+        (project.developerEntity && project.developerEntity.toLowerCase().includes(selectedDeveloper.toLowerCase()));
+
       const q = searchQuery.toLowerCase().trim();
       const matchesSearch = 
         !q ||
@@ -50,11 +68,13 @@ export const Portfolio: React.FC = () => {
         project.location.toLowerCase().includes(q) ||
         project.city.toLowerCase().includes(q) ||
         (project.developer && project.developer.toLowerCase().includes(q)) ||
+        (project.developerEntity && project.developerEntity.toLowerCase().includes(q)) ||
+        (project.engineerName && project.engineerName.toLowerCase().includes(q)) ||
         (project.typology && project.typology.toLowerCase().includes(q));
 
-      return matchesCategory && matchesCity && matchesSearch;
+      return matchesCategory && matchesCity && matchesDeveloper && matchesSearch;
     });
-  }, [activeCategory, selectedCity, searchQuery]);
+  }, [activeCategory, selectedCity, selectedDeveloper, searchQuery]);
 
   return (
     <div className={`min-h-screen pt-28 pb-20 ${isBlueprintMode ? 'bg-slate-950 text-cyan-50' : 'bg-slate-950 text-slate-100'}`}>
@@ -126,7 +146,10 @@ export const Portfolio: React.FC = () => {
             <div className="relative flex-grow max-w-xl">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
+                id="projectSearch"
+                name="projectSearch"
                 type="text"
+                aria-label="Search architectural projects by name, developer, or location"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by project name, developer (Shilp, Shaligram, Swati, Goyal), or locality..."
@@ -198,17 +221,30 @@ export const Portfolio: React.FC = () => {
 
             {/* Results Count & Reset */}
             <div className="flex items-center gap-3 text-xs font-mono text-slate-400">
-              <span>Showing <b>{filteredProjects.length}</b> of {ALL_VERIFIED_PROJECTS.length}</span>
-              {(searchQuery || activeCategory !== 'All' || selectedCity !== 'All') && (
+              {selectedDeveloper && (
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs">
+                  <span>Client: <strong>{selectedDeveloper}</strong></span>
+                  <button 
+                    onClick={() => { setSelectedDeveloper(''); setSearchParams({}); }}
+                    className="p-0.5 hover:text-white"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
+              <span>Showing <strong className="text-white font-bold">{filteredProjects.length}</strong> of 48 statutory sites</span>
+              {(activeCategory !== 'All' || selectedCity !== 'All' || searchQuery !== '' || selectedDeveloper !== '') && (
                 <button
                   onClick={() => {
-                    setSearchQuery('');
                     setActiveCategory('All');
                     setSelectedCity('All');
+                    setSearchQuery('');
+                    setSelectedDeveloper('');
+                    setSearchParams({});
                   }}
-                  className="text-amber-400 hover:underline font-bold"
+                  className="text-amber-400 hover:text-amber-300 underline uppercase tracking-wider text-[11px] ml-2"
                 >
-                  [Reset Filters]
+                  Reset All
                 </button>
               )}
             </div>
@@ -329,6 +365,7 @@ export const Portfolio: React.FC = () => {
                   <tr>
                     <th className="py-4 px-4 font-bold">#</th>
                     <th className="py-4 px-4 font-bold">Project Name</th>
+                    <th className="py-4 px-4 font-bold">Developer / Promoter</th>
                     <th className="py-4 px-4 font-bold">City / Region</th>
                     <th className="py-4 px-4 font-bold">Typology</th>
                     <th className="py-4 px-4 font-bold">COA Registration</th>
@@ -348,6 +385,15 @@ export const Portfolio: React.FC = () => {
                           {p.title}
                         </button>
                         <div className="text-[11px] font-mono font-normal text-slate-400">{p.location}</div>
+                      </td>
+                      <td className="py-3.5 px-4 text-slate-300 font-sans">
+                        <button 
+                          onClick={() => setSelectedDeveloper(p.developer || '')}
+                          className="hover:text-amber-300 text-left"
+                          title="Filter by this developer"
+                        >
+                          {p.developerEntity || p.developer}
+                        </button>
                       </td>
                       <td className="py-3.5 px-4 text-slate-300">{p.city}</td>
                       <td className="py-3.5 px-4">

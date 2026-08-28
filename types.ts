@@ -7,6 +7,24 @@ export enum ServiceType {
   VASTU = 'Vastu Consulting'
 }
 
+export interface FloorPlanItem {
+  title: string;
+  type: string;
+  area: string;
+  description: string;
+}
+
+export interface ProjectSpecifications {
+  totalFloors?: string;
+  totalUnits?: string;
+  plotArea?: string;
+  builtUpArea?: string;
+  structuralSystem?: string;
+  unitMix?: string[];
+  vastuHighlights?: string[];
+  amenitiesList?: string[];
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -26,6 +44,12 @@ export interface Project {
   flagship?: boolean;
   coaRegistration?: string;
   reraNumber?: string;
+  engineerName?: string;
+  developerContact?: string;
+  developerEntity?: string;
+  exactAddress?: string;
+  specifications?: ProjectSpecifications;
+  floorPlans?: FloorPlanItem[];
 }
 
 export interface TeamMember {

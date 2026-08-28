@@ -1,0 +1,73 @@
+{
+  "id": "15",
+  "slug": "15-auxeria-and-astrum",
+  "title": "Auxeria And Astrum",
+  "category": "Mixed Development",
+  "typology": "Mixed Commercial & Residential",
+  "city": "Gandhinagar",
+  "location": "Koba / GIFT City Corridor, Gandhinagar",
+  "developer": "Auxeria Group",
+  "description": "Dual-tower development integrating commercial retail on lower levels with luxury residences above.",
+  "imageUrl": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000",
+  "constructionStage": "Under Construction",
+  "verificationLink": "https://gandhinagarpropertyexpo.gujrera.com/project/auxeria-and-astrum-28131",
+  "linkStatus": "Live Project Portal",
+  "coaRegistration": "CA/2018/103740",
+  "reraNumber": "PR/GJ/GANDHINAGAR/GANDHINAGAR/Others/MAA08131/2021",
+  "specifications": {
+    "totalFloors": "2B + Ground/Podium Retail + 12 to 16 Floors",
+    "totalUnits": "90 Residential Units + 45 Commercial Outlets",
+    "plotArea": "3,500 \u2013 8,000 sq. yards",
+    "builtUpArea": "180,000 \u2013 320,000 sq.ft.",
+    "structuralSystem": "Integrated composite structural grid featuring transfer slab/girder system at podium transition level (Level 4) transferring residential column loads into commercial grid below, fully compliant with IS 456 & IS 1893.",
+    "unitMix": [
+      "Ground & 1st Floor Boulevard Retail & Dining (750 \u2013 2,400 sq.ft.)",
+      "2nd & 3rd Floor Professional Suites (600 \u2013 1,800 sq.ft.)",
+      "4th to 16th Floor 3 & 4 BHK Residential Apartments (1,550 \u2013 2,800 sq.ft.)"
+    ],
+    "vastuHighlights": [
+      "Segregated residential and commercial entry gates aligned to auspicious directional axes",
+      "Commercial storefronts facing high-vibrancy North/East street frontages",
+      "Residential tower entrance oriented with quiet North-East landscaped gateway",
+      "Kitchen and utility stacks aligned in Agni (South-East) and Vayu (North-West) quadrants"
+    ],
+    "amenitiesList": [
+      "Complete physical segregation between commercial visitors and residential residents",
+      "Podium-level landscaped community deck on 4th floor with swimming pool and gym",
+      "Dedicated retail boulevard promenade with visitor surface parking",
+      "Advanced dual-level basement car parking with access-controlled residential ramps",
+      "Solar-powered common area illumination & organic waste composting unit"
+    ]
+  },
+  "floorPlans": [
+    {
+      "title": "Ground & Podium Mixed-Use Integration Plan",
+      "type": "Master Podium Layout",
+      "area": "16,000 \u2013 28,000 sq.ft.",
+      "description": "Street-facing retail arcades with separate vehicular arrival loops for residents and shoppers, dedicated service corridors, and security checkpoints."
+    },
+    {
+      "title": "Podium Amenity Deck (4th Floor)",
+      "type": "Amenity Landscape Plan",
+      "area": "12,000 \u2013 20,000 sq.ft.",
+      "description": "Elevated residents-only podium featuring clubhouse, lap pool, kids splash pool, yoga pavilion, and landscaped gardens isolated from street noise."
+    },
+    {
+      "title": "Typical Residential Tower Floor Plan",
+      "type": "Tower Floor Plate",
+      "area": "8,000 \u2013 12,500 sq.ft. per floor",
+      "description": "Four corner-facing residential residences per floor ensuring three-sided open ventilation, private foyer entries, and service elevator access."
+    },
+    {
+      "title": "3 BHK Family Residence Plan",
+      "type": "Unit Layout Plan",
+      "area": "1,750 \u2013 2,150 sq.ft. Super Built-up",
+      "description": "Spacious living room, dining bay, modular kitchen with store room & utility, three attached bathrooms, and expansive scenic balcony."
+    }
+  ],
+  "engineerName": "Prashantkumar Babulal Parmar",
+  "developerContact": "+91 9726797996",
+  "developerEntity": "Shree Infracon",
+  "exactAddress": "Auxeria And Astrum Block No",
+  "coverImage": "/projects/15-cover.jpg"
+}

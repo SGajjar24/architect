@@ -1,0 +1,44 @@
+{
+  "projectId": "39",
+  "projectTitle": "S9 Imperial",
+  "architect": "Ar. Vidhi Satishbhai Gajjar (CA/2018/103740)",
+  "category": "Commercial",
+  "plans": [
+    {
+      "planId": "PL-39-01",
+      "title": "Ground Level High-Street Retail Master Plan",
+      "category": "Retail Floor Plate",
+      "coverageArea": "12,000 – 22,000 sq.ft.",
+      "spatialDescription": "Double-height retail showrooms with wide 15-to-25 ft glass display frontages, uninterrupted pedestrian promenade, separate goods loading dock, and seamless customer drop-off porch.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-39-02",
+      "title": "Typical Corporate Office Floor Plan",
+      "category": "Office Plate Layout",
+      "coverageArea": "9,500 – 18,500 sq.ft. per floor",
+      "spatialDescription": "Column-free flexible office modules with 3.6-metre floor-to-floor height, central service core with AHU rooms, electrical/server risers, executive restrooms, and dual fire-escape stairwells.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-39-03",
+      "title": "Corporate Executive Suite Plan",
+      "category": "Unit Layout Plan",
+      "coverageArea": "1,200 – 2,800 sq.ft.",
+      "spatialDescription": "Bespoke corporate layout featuring private director cabin with panoramic glass corner, 8-seater discussion room, open workstations bay, pantry, and private executive restroom.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-39-04",
+      "title": "Subterranean Parking & Logistics Master Plan",
+      "category": "Basement Services Plan",
+      "coverageArea": "30,000 – 65,000 sq.ft. across 2/3 levels",
+      "spatialDescription": "Wide radius access ramps, automated boom barrier RFID access, fire suppression sprinkler grid, DG room, STP plant, and underground water reservoir.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    }
+  ]
+}

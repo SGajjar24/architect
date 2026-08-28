@@ -23,14 +23,23 @@ const Reveal: React.FC<RevealProps> = ({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // If element is already in viewport on mount, show immediately
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        setIsVisible(true);
+        return;
+      }
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting || (entry.boundingClientRect && entry.boundingClientRect.top < window.innerHeight)) {
           setIsVisible(true);
           observer.disconnect();
         }
       },
-      { threshold, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.02, rootMargin: '0px 0px 50px 0px' }
     );
 
     if (ref.current) {

@@ -56,7 +56,7 @@ export const ThreeArchitectureScene: React.FC<ThreeArchitectureSceneProps> = ({
     renderer.setSize(width, heightPx);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type = THREE.PCFShadowMap;
     rendererRef.current = renderer;
 
     // 3. LIGHTING

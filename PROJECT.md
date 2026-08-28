@@ -44,11 +44,15 @@
 ├── api/chat.js              ← Vercel serverless Gemini proxy
 ├── components/              ← 14 React components (3D scenes, modals, navigation)
 ├── pages/                   ← 7 active routes (Home, Portfolio, Practice, About, Contact, Privacy, Terms)
-├── data/projectsData.ts     ← 48 RERA-verified projects (source of truth)
+├── projects/                ← 48 dedicated project directories with dossiers & plans
+│   ├── 01-nb-parva/         ← PROJECT.md, project.json, plans/layout-schema.json
+│   ├── ...                  ← Complete statutory & architectural dossiers
+│   └── README.md            ← Master 48-project index
+├── data/projectsData.ts     ← 48 RERA-verified projects + rich specs & floor plans
 ├── context/StudioContext.tsx ← Blueprint mode + 3D rendering state
 ├── services/geminiService.ts← Client-side chat API wrapper
 ├── constants.ts             ← Brand identity, images, contact info
-└── types.ts                 ← TypeScript interfaces (Project, TeamMember, ChatMessage)
+└── types.ts                 ← TypeScript interfaces (Project, FloorPlanItem, ProjectSpecifications)
 ```
 
 ## AI Conversation Log
@@ -59,6 +63,8 @@
 | 2026-08 | Complete 3D rebuild | Three.js WebGL, blueprint mode, rebranded to Studio Vidhi Gajjar |
 | 2026-08 | RERA link audit | Verified all 48 projects, replaced broken aurumproptech links |
 | 2026-08 | Antigravity setup | Added GEMINI.md, .agents/ skills & hooks, model strategy |
+| 2026-08 | Project Folders & Plans | Created 48 dedicated project folders with dossiers, floor plans, specs, & enhanced modal |
+| 2026-08 | Public Data Harvester & Partners | Scraped local project cover images, harvested structural engineers & developer entities, built interactive Partners component, synchronized 48 dossiers |
 
 ## Environment Variables
 ```

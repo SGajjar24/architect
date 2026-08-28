@@ -76,10 +76,12 @@ export const Contact: React.FC = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase tracking-wider text-slate-400">
+                        <label htmlFor="contactName" className="block text-xs font-mono uppercase tracking-wider text-slate-400">
                           Full Name *
                         </label>
                         <input
+                          id="contactName"
+                          name="name"
                           type="text"
                           required
                           value={formData.name}
@@ -90,10 +92,12 @@ export const Contact: React.FC = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase tracking-wider text-slate-400">
+                        <label htmlFor="contactEmail" className="block text-xs font-mono uppercase tracking-wider text-slate-400">
                           Email Address *
                         </label>
                         <input
+                          id="contactEmail"
+                          name="email"
                           type="email"
                           required
                           value={formData.email}
@@ -106,10 +110,12 @@ export const Contact: React.FC = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase tracking-wider text-slate-400">
+                        <label htmlFor="contactPhone" className="block text-xs font-mono uppercase tracking-wider text-slate-400">
                           Contact Number *
                         </label>
                         <input
+                          id="contactPhone"
+                          name="phone"
                           type="tel"
                           required
                           value={formData.phone}
@@ -120,10 +126,12 @@ export const Contact: React.FC = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase tracking-wider text-slate-400">
+                        <label htmlFor="contactProjectType" className="block text-xs font-mono uppercase tracking-wider text-slate-400">
                           Development Typology
                         </label>
                         <select
+                          id="contactProjectType"
+                          name="projectType"
                           value={formData.projectType}
                           onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/10 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors"
@@ -138,10 +146,12 @@ export const Contact: React.FC = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-mono uppercase tracking-wider text-slate-400">
+                      <label htmlFor="contactCity" className="block text-xs font-mono uppercase tracking-wider text-slate-400">
                         Project Territory / City
                       </label>
                       <select
+                        id="contactCity"
+                        name="city"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/10 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors"
@@ -157,10 +167,12 @@ export const Contact: React.FC = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-mono uppercase tracking-wider text-slate-400">
+                      <label htmlFor="contactMessage" className="block text-xs font-mono uppercase tracking-wider text-slate-400">
                         Project Scope & Requirements
                       </label>
                       <textarea
+                        id="contactMessage"
+                        name="message"
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}

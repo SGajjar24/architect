@@ -19,6 +19,8 @@ import {
   Grid 
 } from 'lucide-react';
 
+import { Partners } from '../components/Partners';
+
 export const Home: React.FC = () => {
   const navigate = useNavigate();
   const { isBlueprintMode } = useStudio();
@@ -246,6 +248,9 @@ export const Home: React.FC = () => {
           </Reveal>
         </div>
       </section>
+
+      {/* NEW PARTNERS SECTION */}
+      <Partners />
 
       {/* 5. CALL TO ACTION */}
       <section className="py-24 bg-gradient-to-b from-slate-950 to-slate-900 text-center relative overflow-hidden border-t border-white/5">

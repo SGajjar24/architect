@@ -1,0 +1,44 @@
+{
+  "projectId": "15",
+  "projectTitle": "Auxeria And Astrum",
+  "architect": "Ar. Vidhi Satishbhai Gajjar (CA/2018/103740)",
+  "category": "Mixed Development",
+  "plans": [
+    {
+      "planId": "PL-15-01",
+      "title": "Ground & Podium Mixed-Use Integration Plan",
+      "category": "Master Podium Layout",
+      "coverageArea": "16,000 – 28,000 sq.ft.",
+      "spatialDescription": "Street-facing retail arcades with separate vehicular arrival loops for residents and shoppers, dedicated service corridors, and security checkpoints.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-15-02",
+      "title": "Podium Amenity Deck (4th Floor)",
+      "category": "Amenity Landscape Plan",
+      "coverageArea": "12,000 – 20,000 sq.ft.",
+      "spatialDescription": "Elevated residents-only podium featuring clubhouse, lap pool, kids splash pool, yoga pavilion, and landscaped gardens isolated from street noise.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-15-03",
+      "title": "Typical Residential Tower Floor Plan",
+      "category": "Tower Floor Plate",
+      "coverageArea": "8,000 – 12,500 sq.ft. per floor",
+      "spatialDescription": "Four corner-facing residential residences per floor ensuring three-sided open ventilation, private foyer entries, and service elevator access.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-15-04",
+      "title": "3 BHK Family Residence Plan",
+      "category": "Unit Layout Plan",
+      "coverageArea": "1,750 – 2,150 sq.ft. Super Built-up",
+      "spatialDescription": "Spacious living room, dining bay, modular kitchen with store room & utility, three attached bathrooms, and expansive scenic balcony.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    }
+  ]
+}

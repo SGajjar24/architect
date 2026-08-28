@@ -1,0 +1,72 @@
+{
+  "id": "22",
+  "slug": "22-spacelink",
+  "title": "Spacelink",
+  "category": "Commercial",
+  "typology": "Commercial Offices & Retail",
+  "city": "Gandhinagar",
+  "location": "Kudasan, Gandhinagar",
+  "developer": "Spacelink Group",
+  "description": "Corporate office complex engineered with open-span floorplates and dedicated IT infrastructure.",
+  "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000",
+  "constructionStage": "Under Construction",
+  "verificationLink": "https://gandhinagarpropertyexpo.gujrera.com/project/spacelink-18530",
+  "linkStatus": "Live Project Portal",
+  "coaRegistration": "CA/2018/103740",
+  "reraNumber": "PR/GJ/GANDHINAGAR/GANDHINAGAR/Others/CAA08530/2018",
+  "specifications": {
+    "totalFloors": "2B/3B + Ground + 9 to 18 Floors",
+    "totalUnits": "64 to 280 Offices & Retail Showrooms",
+    "plotArea": "2,500 \u2013 7,000 sq. yards",
+    "builtUpArea": "160,000 \u2013 380,000 sq.ft.",
+    "structuralSystem": "Heavy-duty commercial RCC column-beam and shear wall core structure engineered for wide column spans (8.4m x 8.4m grid) allowing column-free internal partitioning, with IS 1893 seismic compliance.",
+    "unitMix": [
+      "Ground & First Floor High-Street Retail Showrooms (850 \u2013 3,500 sq.ft.)",
+      "Grade-A Corporate Office Suites (650 \u2013 2,800 sq.ft.)",
+      "Full-Floor Corporate Floorplates (8,000 \u2013 16,000 sq.ft.)"
+    ],
+    "vastuHighlights": [
+      "Grand North and East facing main corporate reception entrances welcoming wealth flow",
+      "Executive director cabins situated in South-West sector for authoritative decision-making",
+      "Finance and accounts zones placed in North sector (Kuber sthana) for financial abundance",
+      "Conference & ideation rooms in North-West (Vayu) quadrant for dynamic brainstorming"
+    ],
+    "amenitiesList": [
+      "High-speed destination-controlled passenger elevators (1.75 - 2.5 m/s)",
+      "Double-glazed structural unitized glass facade with Low-E thermal coating",
+      "Central VRV/VRF air-conditioning provision with energy-recovery ventilation",
+      "100% DG backup for essential services, elevators, and common area lighting",
+      "Automated multi-level stack/puzzle basement parking systems"
+    ]
+  },
+  "floorPlans": [
+    {
+      "title": "Ground Level High-Street Retail Master Plan",
+      "type": "Retail Floor Plate",
+      "area": "12,000 \u2013 22,000 sq.ft.",
+      "description": "Double-height retail showrooms with wide 15-to-25 ft glass display frontages, uninterrupted pedestrian promenade, separate goods loading dock, and seamless customer drop-off porch."
+    },
+    {
+      "title": "Typical Corporate Office Floor Plan",
+      "type": "Office Plate Layout",
+      "area": "9,500 \u2013 18,500 sq.ft. per floor",
+      "description": "Column-free flexible office modules with 3.6-metre floor-to-floor height, central service core with AHU rooms, electrical/server risers, executive restrooms, and dual fire-escape stairwells."
+    },
+    {
+      "title": "Corporate Executive Suite Plan",
+      "type": "Unit Layout Plan",
+      "area": "1,200 \u2013 2,800 sq.ft.",
+      "description": "Bespoke corporate layout featuring private director cabin with panoramic glass corner, 8-seater discussion room, open workstations bay, pantry, and private executive restroom."
+    },
+    {
+      "title": "Subterranean Parking & Logistics Master Plan",
+      "type": "Basement Services Plan",
+      "area": "30,000 \u2013 65,000 sq.ft. across 2/3 levels",
+      "description": "Wide radius access ramps, automated boom barrier RFID access, fire suppression sprinkler grid, DG room, STP plant, and underground water reservoir."
+    }
+  ],
+  "engineerName": "Dhruv Sompura / Associated Structural Engineers",
+  "developerContact": "+91 94290 21118",
+  "developerEntity": "Spacelink Group",
+  "exactAddress": "Kudasan, Gandhinagar"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "1",
+  "slug": "01-nb-parva",
+  "title": "Nb Parva",
+  "category": "Residential",
+  "typology": "Apartments / Flats",
+  "city": "Ahmedabad",
+  "location": "Gota, Ahmedabad",
+  "developer": "NB Group",
+  "description": "High-density contemporary residential development featuring optimized floor layouts and structural coordination.",
+  "imageUrl": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000",
+  "constructionStage": "Under Construction",
+  "verificationLink": "https://www.ahmedabadpropertyexpo.com/project/nb-parva-30819",
+  "linkStatus": "Live Project Portal",
+  "coaRegistration": "CA/2018/103740",
+  "reraNumber": "PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/MAA09819/2022",
+  "specifications": {
+    "totalFloors": "1B/2B + Stilt/Ground + 12 to 14 Floors",
+    "totalUnits": "110 to 240 Units",
+    "plotArea": "2,800 \u2013 6,200 sq. yards",
+    "builtUpArea": "120,000 \u2013 260,000 sq.ft.",
+    "structuralSystem": "Earthquake-resistant RCC framed structure compliant with IS 456:2000 and IS 1893:2016 Seismic Zone III standards with high-grade Fe550D TMT rebars and M30/M35 design mix concrete.",
+    "unitMix": [
+      "2 BHK Smart Urban Homes (1,150 \u2013 1,350 sq.ft.)",
+      "3 BHK Spacious Family Residences (1,600 \u2013 1,950 sq.ft.)",
+      "3 BHK + Work Studio (2,100 sq.ft.)"
+    ],
+    "vastuHighlights": [
+      "North & North-East main door alignments optimizing ambient morning solar intake",
+      "Agni corner (South-East) dedicated kitchen zones with natural cross-ventilation",
+      "Water bodies and borewell / underground water tanks placed in North-East (Ishanya) zone",
+      "Living-dining hall orientation oriented to capture prevalent South-West summer breezes"
+    ],
+    "amenitiesList": [
+      "Centrally landscaped green garden with gazebo sit-outs",
+      "Children safe play zone with rubberized flooring",
+      "Multi-purpose community banquet hall & indoor games arena",
+      "Jogging track along the landscaped perimeter green buffer",
+      "24/7 CCTV surveillance with boom barriers and access control"
+    ]
+  },
+  "floorPlans": [
+    {
+      "title": "Typical Floor Core & Circulation Layout",
+      "type": "Floor Plate Plan",
+      "area": "8,500 \u2013 14,000 sq.ft. per floor",
+      "description": "Optimized 4-to-6 units per floor layout with central elevator core, dual fire escape staircases, wide 6-foot corridors, and dedicated service shafts ensuring zero cross-visibility between unit entries."
+    },
+    {
+      "title": "3 BHK Master Residence Plan",
+      "type": "Unit Layout Plan",
+      "area": "1,650 \u2013 2,250 sq.ft. Super Built-up",
+      "description": "Generous 18x12 ft living area opening into a 6-foot wide cantilevered deck, separate dining zone, master bedroom with walk-in closet & ensuite bath, secondary bedrooms with external window bays, and utility wash yard."
+    },
+    {
+      "title": "2 BHK Urban Living Layout",
+      "type": "Unit Layout Plan",
+      "area": "1,180 \u2013 1,380 sq.ft. Super Built-up",
+      "description": "Zero dead-space modular configuration maximizing carpet efficiency, open-concept living-dining, modular kitchen with attached utility balcony, and dual cross-ventilated bedrooms."
+    },
+    {
+      "title": "Basement & Stilt Parking Master Plan",
+      "type": "Parking & Services Plan",
+      "area": "25,000 \u2013 50,000 sq.ft. per level",
+      "description": "Two-way 6-metre wide vehicular driveway, demarcated car bays with column protectors, EV charging points, rainwater collection sumps, and mechanical ventilation exhaust shafts."
+    }
+  ],
+  "engineerName": "Dhruv Gajanand Sompura",
+  "developerContact": "+91 9898779304",
+  "developerEntity": "Nb Infracon Llp",
+  "exactAddress": "Nr",
+  "coverImage": "/projects/1-cover.jpg"
+}

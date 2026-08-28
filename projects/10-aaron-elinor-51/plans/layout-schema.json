@@ -1,0 +1,44 @@
+{
+  "projectId": "10",
+  "projectTitle": "Aaron Elinor 51",
+  "architect": "Ar. Vidhi Satishbhai Gajjar (CA/2018/103740)",
+  "category": "Residential",
+  "plans": [
+    {
+      "planId": "PL-10-01",
+      "title": "Typical Floor Core & Circulation Layout",
+      "category": "Floor Plate Plan",
+      "coverageArea": "8,500 – 14,000 sq.ft. per floor",
+      "spatialDescription": "Optimized 4-to-6 units per floor layout with central elevator core, dual fire escape staircases, wide 6-foot corridors, and dedicated service shafts ensuring zero cross-visibility between unit entries.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-10-02",
+      "title": "3 BHK Master Residence Plan",
+      "category": "Unit Layout Plan",
+      "coverageArea": "1,650 – 2,250 sq.ft. Super Built-up",
+      "spatialDescription": "Generous 18x12 ft living area opening into a 6-foot wide cantilevered deck, separate dining zone, master bedroom with walk-in closet & ensuite bath, secondary bedrooms with external window bays, and utility wash yard.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-10-03",
+      "title": "2 BHK Urban Living Layout",
+      "category": "Unit Layout Plan",
+      "coverageArea": "1,180 – 1,380 sq.ft. Super Built-up",
+      "spatialDescription": "Zero dead-space modular configuration maximizing carpet efficiency, open-concept living-dining, modular kitchen with attached utility balcony, and dual cross-ventilated bedrooms.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    },
+    {
+      "planId": "PL-10-04",
+      "title": "Basement & Stilt Parking Master Plan",
+      "category": "Parking & Services Plan",
+      "coverageArea": "25,000 – 50,000 sq.ft. per level",
+      "spatialDescription": "Two-way 6-metre wide vehicular driveway, demarcated car bays with column protectors, EV charging points, rainwater collection sumps, and mechanical ventilation exhaust shafts.",
+      "circulationEfficiency": "82% - 88% usable carpet ratio",
+      "structuralGrid": "Continuous orthogonal RCC grid with edge shear walls"
+    }
+  ]
+}
