@@ -33,6 +33,8 @@ export const Portfolio: React.FC = () => {
   const [selectedDeveloper, setSelectedDeveloper] = useState<string>(developerParam);
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [hoveredProject, setHoveredProject] = useState<Project | null>(null);
+  const [cursorPos, setCursorPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const { isBlueprintMode } = useStudio();
 
   useEffect(() => {
@@ -358,7 +360,10 @@ export const Portfolio: React.FC = () => {
 
         {/* MODE 2: Statutory Ledger Table */}
         {viewMode === 'table' && filteredProjects.length > 0 && (
-          <div className="bg-slate-900/70 rounded-2xl shadow-2xl border border-white/10 overflow-hidden backdrop-blur-xl">
+          <div 
+            className="bg-slate-900/70 rounded-2xl shadow-2xl border border-white/10 overflow-hidden backdrop-blur-xl"
+            onMouseMove={(e) => setCursorPos({ x: e.clientX, y: e.clientY })}
+          >
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs font-mono">
                 <thead className="bg-slate-950 text-amber-400 uppercase text-[10px] tracking-wider border-b border-white/10">
@@ -375,7 +380,12 @@ export const Portfolio: React.FC = () => {
                 </thead>
                 <tbody className="divide-y divide-white/5">
                   {filteredProjects.map((p, i) => (
-                    <tr key={p.id} className="hover:bg-white/[0.02] transition-colors">
+                    <tr 
+                      key={p.id} 
+                      className="hover:bg-white/[0.04] transition-colors cursor-pointer"
+                      onMouseEnter={() => setHoveredProject(p)}
+                      onMouseLeave={() => setHoveredProject(null)}
+                    >
                       <td className="py-3.5 px-4 text-slate-500">{i + 1}</td>
                       <td className="py-3.5 px-4 font-bold text-white font-sans text-sm">
                         <button
@@ -427,6 +437,42 @@ export const Portfolio: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Floating Cursor Hover Preview for Table Archive */}
+      {viewMode === 'table' && hoveredProject && (
+        <div
+          className="fixed pointer-events-none z-50 transition-transform duration-75 ease-out hidden md:block"
+          style={{
+            left: `${Math.min(cursorPos.x + 24, window.innerWidth - 320)}px`,
+            top: `${Math.max(20, Math.min(cursorPos.y - 140, window.innerHeight - 260))}px`,
+            width: '280px'
+          }}
+        >
+          <div className="rounded-2xl overflow-hidden bg-slate-950/95 border border-amber-500/40 shadow-2xl backdrop-blur-2xl p-3 space-y-2.5 animate-fade-in text-slate-100">
+            <div className="relative h-32 w-full rounded-xl overflow-hidden bg-slate-900">
+              <img
+                src={hoveredProject.imageUrl}
+                alt={hoveredProject.title}
+                className="w-full h-full object-cover opacity-90"
+              />
+              <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-slate-950/80 text-[10px] font-mono font-bold text-amber-300 border border-amber-500/20">
+                {hoveredProject.category}
+              </div>
+              <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-emerald-950/90 text-[9px] font-mono font-semibold text-emerald-300 border border-emerald-500/30">
+                RERA Certified
+              </div>
+            </div>
+            <div>
+              <h4 className="font-serif font-bold text-white text-sm">{hoveredProject.title}</h4>
+              <p className="text-[11px] font-mono text-slate-400 truncate">{hoveredProject.location}</p>
+              <div className="mt-1.5 pt-1.5 border-t border-white/10 flex items-center justify-between text-[10px] font-mono">
+                <span className="text-slate-500">COA: CA/2018/103740</span>
+                <span className="text-amber-400 font-bold">{hoveredProject.city}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Project Deep-Dive Modal Drawer */}
       <ProjectModal

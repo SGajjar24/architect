@@ -16,6 +16,8 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
+import { DrawingComparisonSlider } from './DrawingComparisonSlider';
+
 interface ProjectModalProps {
   project: Project | null;
   onClose: () => void;
@@ -158,6 +160,21 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {/* TAB 1: OVERVIEW */}
           {activeTab === 'overview' && (
             <div className="space-y-6 animate-fade-in">
+              {/* Interactive CAD Drawing vs Executed Render Slider */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-xs font-mono">
+                  <span className="text-amber-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <Layers className="w-3.5 h-3.5" />
+                    Interactive Architectural Drawing &bull; Render Comparison
+                  </span>
+                  <span className="text-slate-400 text-[11px]">Drag center divider</span>
+                </div>
+                <DrawingComparisonSlider
+                  renderImage={project.imageUrl}
+                  title={project.title}
+                />
+              </div>
+
               {/* Statutory Credential Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-2xl bg-slate-950/80 border border-white/5 text-center">
                 <div>

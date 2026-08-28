@@ -116,6 +116,76 @@ export const Practice: React.FC = () => {
         ))}
       </div>
 
+      {/* Materiality & Architectural Tectonics Showcase */}
+      <div className="max-w-7xl mx-auto px-6 mb-24">
+        <Reveal>
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-amber-300 text-xs font-mono font-semibold uppercase tracking-widest">
+              <Sparkles className="w-3.5 h-3.5" />
+              Tectonic Materiality
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+              Honesty of Materials. Precision in Detailing.
+            </h2>
+            <p className="text-slate-400 text-sm font-light leading-relaxed">
+              Every development is sculpted with an honest palette of materials selected for longevity, climatic resilience across Gujarat's solar conditions, and sensory refinement.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Fair-Face Cast Concrete",
+                texture: "Tactile / Monolithic",
+                colorCode: "#94A3B8 &bull; Slate Concrete",
+                desc: "High-grade architectural concrete offering raw monolithic strength, natural thermal lag, and timeless tectonic presence.",
+                tag: "Structural Core"
+              },
+              {
+                title: "Low-E Double Glazing",
+                texture: "Solar Shield / Reflective",
+                colorCode: "#0EA5E9 &bull; Smoked Cyan Glass",
+                desc: "High-performance acoustic and solar-control glass facades optimizing natural daylighting while reducing thermal cooling loads.",
+                tag: "Envelope System"
+              },
+              {
+                title: "Terracotta & Brise-Soleil",
+                texture: "Warm Earth / Perforated",
+                colorCode: "#C2410C &bull; Gujarat Clay",
+                desc: "Climate-responsive louvers and modern perforated jaalis engineered for passive breeze induction and dynamic shadow play.",
+                tag: "Climatic Screen"
+              },
+              {
+                title: "Architectural Bronze & Steel",
+                texture: "Precision Metal / Anodized",
+                colorCode: "#D97706 &bull; Warm Bronze",
+                desc: "Handcrafted entrance portals, structural canopies, and bespoke joinery with enduring patinas designed for tactile luxury.",
+                tag: "Finishing Details"
+              }
+            ].map((mat, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-amber-500/40 transition-all space-y-4 group backdrop-blur-xl"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">
+                    {mat.tag}
+                  </span>
+                  <span className="text-[11px] font-mono text-slate-500">{mat.texture}</span>
+                </div>
+                <h3 className="text-lg font-serif font-bold text-white group-hover:text-amber-300 transition-colors">
+                  {mat.title}
+                </h3>
+                <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                  {mat.desc}
+                </p>
+                <div className="pt-3 border-t border-white/5 text-[10px] font-mono text-slate-500" dangerouslySetInnerHTML={{ __html: mat.colorCode }} />
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+
       {/* Statutory Footer Callout */}
       <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
         <Reveal>
