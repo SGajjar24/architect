@@ -92,6 +92,9 @@ const VastuChatWidget: React.FC = () => {
           <div className="p-3 bg-white border-t border-slate-200">
             <div className="flex gap-2">
               <input
+                id="vastu-chat-input"
+                name="vastuChatInput"
+                aria-label="Ask about Vastu principles"
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}

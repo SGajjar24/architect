@@ -42,7 +42,7 @@ export const Contact: React.FC = () => {
             Initiate an Architectural Dialogue.
           </h1>
           <p className="text-sm sm:text-base text-slate-400 max-w-2xl mt-3 font-light leading-relaxed">
-            Direct collaboration with Ar. Vidhi S. Gajjar (<span className="font-mono text-amber-300">CA/2018/103740</span>) for architectural master planning, luxury residential developments, commercial hubs, and statutory RERA certifications.
+            Direct collaboration with Ar. Vidhi S. Gajjar for architectural master planning, luxury residential developments, commercial corporate hubs, and statutory RERA certifications across Gujarat.
           </p>
         </Reveal>
       </div>

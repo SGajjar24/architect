@@ -37,9 +37,13 @@ export const DrawingComparisonSlider: React.FC<DrawingComparisonSliderProps> = (
   };
 
   useEffect(() => {
-    const handleGlobalMouseUp = () => setIsDragging(false);
-    window.addEventListener('mouseup', handleGlobalMouseUp);
-    return () => window.removeEventListener('mouseup', handleGlobalMouseUp);
+    const handleGlobalEnd = () => setIsDragging(false);
+    window.addEventListener('mouseup', handleGlobalEnd);
+    window.addEventListener('touchend', handleGlobalEnd);
+    return () => {
+      window.removeEventListener('mouseup', handleGlobalEnd);
+      window.removeEventListener('touchend', handleGlobalEnd);
+    };
   }, []);
 
   return (
@@ -47,7 +51,7 @@ export const DrawingComparisonSlider: React.FC<DrawingComparisonSliderProps> = (
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onTouchMove={handleTouchMove}
-      className={`relative select-none overflow-hidden rounded-2xl border border-white/10 bg-slate-950 shadow-2xl ${className}`}
+      className={`relative select-none overflow-hidden rounded-2xl border border-white/10 bg-slate-950 shadow-2xl touch-none ${className}`}
       style={{ cursor: isDragging ? 'ew-resize' : 'default' }}
     >
       {/* 1. BOTTOM LAYER: PHOTOREALISTIC RENDER */}

@@ -60,14 +60,14 @@ export const FOUNDERS: TeamMember[] = [
     name: 'Ar. Vidhi Satishbhai Gajjar',
     role: 'Principal Architect & Certifying Architect of Record',
     imageUrl: IMAGES.VIDHI,
-    bio: 'CoA-registered architect (CA/2018/103740) with 8+ years experience as Certifying Architect of Record for 48+ RERA-registered developments across Gujarat (Shilp, Shaligram, Swati Procon, Goyal & Co., Ratnaakar). Graduated First Class with Distinction from Anant National University.',
+    bio: 'CoA-registered architect with extensive experience as Certifying Architect of Record for 48+ RERA-registered developments across Gujarat (Shilp, Shaligram, Swati Procon, Goyal & Co., Ratnaakar). Graduated First Class with Distinction from Anant National University.',
     strengths: ['RERA Form 1 Statutory Compliance', 'Vastu-led space planning', 'High-density residential towers', 'Corporate commercial headquarters']
   },
   {
     name: 'Swetang Gajjar',
     role: 'Co-founder, AI & Smart Systems Lead',
     imageUrl: IMAGES.SWETANG,
-    bio: 'Senior software engineer & AI/ML specialist with 8+ years in industrial automation and computer vision. Transforms traditional construction into data-driven, intelligent environments.',
+    bio: 'Senior software engineer & AI/ML specialist with deep expertise in industrial automation and computer vision. Transforms traditional construction into data-driven, intelligent environments.',
     strengths: ['AI & ML model development', 'Computer vision site safety & defect monitoring', 'Smart building IoT', 'Full-stack cloud systems']
   }
 ];

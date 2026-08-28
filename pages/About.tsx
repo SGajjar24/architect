@@ -87,7 +87,7 @@ export const About: React.FC = () => {
               </div>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                With over <b>8+ years of dedicated professional practice</b>, Ar. Vidhi S. Gajjar serves as Senior Architect and Certifying Architect of Record at ADS Architect Pvt. Ltd. and Principal of Studio Vidhi Gajjar. She has architecturally planned, certified, and managed statutory compliance for over <b>48+ RERA-registered projects</b> across Gujarat.
+                With extensive professional practice as Senior Architect and Certifying Architect of Record, Ar. Vidhi S. Gajjar directs architectural master planning, technical GDCR compliance, and statutory execution for over <b>48+ RERA-registered developments</b> across Gujarat.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -189,12 +189,12 @@ export const About: React.FC = () => {
                   Swetang Gajjar
                 </h2>
                 <p className="text-xs font-mono text-slate-400 mt-1">
-                  Senior Software Engineer & AI Specialist &bull; 8+ Years Experience
+                  Senior Software Engineer &bull; Computational AI & Automation Specialist
                 </p>
               </div>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Swetang Gajjar leads computational technology and automated site intelligence. With 8+ years of engineering experience across industrial automation, computer vision, and machine learning, he pioneers AI-assisted on-site safety compliance, crack/defect detection, and digital twin monitoring.
+                Swetang Gajjar leads computational technology, automated site intelligence, and digital twin monitoring. Bringing deep engineering expertise across industrial automation, computer vision, and machine learning, he pioneers AI-assisted on-site safety compliance, structural defect detection, and intelligent building systems.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">

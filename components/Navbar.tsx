@@ -47,9 +47,9 @@ export const Navbar: React.FC = () => {
               STUDIO VIDHI GAJJAR
             </div>
             <div className="text-[10px] font-mono tracking-widest text-amber-400/90 flex items-center gap-1.5 uppercase">
-              <span>ARCHITECT</span>
+              <span>CONTEMPORARY PRACTICE</span>
               <span>&bull;</span>
-              <span className="text-slate-400 font-bold">CA/2018/103740</span>
+              <span className="text-slate-400 font-medium">GUJARAT</span>
             </div>
           </div>
         </Link>

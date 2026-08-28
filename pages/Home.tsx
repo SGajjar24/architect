@@ -21,6 +21,7 @@ import {
 
 import { Partners } from '../components/Partners';
 import { MagneticButton } from '../components/MagneticButton';
+import { DeveloperMarquee } from '../components/DeveloperMarquee';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ export const Home: React.FC = () => {
           <Reveal variant="fade-up" delay={100}>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold uppercase tracking-widest mb-6 backdrop-blur-md pointer-events-auto">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>Studio Vidhi Gajjar &bull; CA/2018/103740</span>
+              <span>Contemporary Practice &bull; Statutory Master Planning</span>
             </div>
           </Reveal>
 
@@ -93,10 +94,10 @@ export const Home: React.FC = () => {
       <section className="relative z-10 bg-slate-950 border-y border-white/5 py-12">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { label: "RERA Registered Projects", value: "48+", sub: "100% Publicly Verified" },
-            { label: "Council of Architecture", value: "CA/2018/103740", sub: "Official License" },
-            { label: "Regional Coverage", value: "6 Cities", sub: "Ahmedabad, Gandhinagar, Surat..." },
-            { label: "Practice Experience", value: "8+ Years", sub: "Senior Architect of Record" }
+            { label: "RERA Registered Developments", value: "48+", sub: "100% Publicly Traceable" },
+            { label: "Statutory Approvals", value: "100%", sub: "Zero-Deficiency Track Record" },
+            { label: "Regional Urban Reach", value: "6 Cities", sub: "Ahmedabad, Gandhinagar, Surat..." },
+            { label: "Master Planned Footprint", value: "48 Sites", sub: "High-Rise & Commercial Hubs" }
           ].map((stat, i) => (
             <Reveal key={i} delay={i * 100} variant="fade-up">
               <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-amber-500/30 transition-all text-center">
@@ -112,6 +113,9 @@ export const Home: React.FC = () => {
           ))}
         </div>
       </section>
+
+      {/* 3. INFINITE DEVELOPER LOGO MARQUEE SCROLLER */}
+      <DeveloperMarquee />
 
       {/* 3. 3D PERSPECTIVE FEATURED PROJECTS SHOWCASE */}
       <section className="py-28 bg-slate-950 relative overflow-hidden">
