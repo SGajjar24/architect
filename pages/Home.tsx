@@ -29,26 +29,26 @@ export const Home: React.FC = () => {
     <div className={`min-h-screen ${isBlueprintMode ? 'bg-slate-950 text-cyan-50' : 'bg-slate-950 text-slate-100'}`}>
       
       {/* 1. HERO SECTION WITH CINEMATIC ARCHITECTURAL FILM REEL */}
-      <section className="relative h-screen min-h-[720px] max-h-[1080px] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-28 sm:pt-28 sm:pb-24">
         
         {/* Fullscreen Architectural Story Cinematic Reel */}
         <HeroCinematicReel />
 
         {/* Ambient Vignette & Text Readability Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-slate-950/90 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-slate-950/90 to-transparent pointer-events-none" />
 
         {/* Hero Copy Overlay */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pointer-events-none flex flex-col items-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pointer-events-none flex flex-col items-center justify-center">
           <Reveal variant="fade-up" delay={100}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold uppercase tracking-widest mb-6 backdrop-blur-md pointer-events-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/85 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold uppercase tracking-widest mb-6 backdrop-blur-md pointer-events-auto shadow-lg">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
               <span>Contemporary Practice &bull; Statutory Master Planning</span>
             </div>
           </Reveal>
 
           <Reveal variant="zoom" delay={200}>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] text-balance mb-6">
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] text-balance mb-6 text-white">
               Sculpting Space.<br />
               <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100 bg-clip-text text-transparent">
                 Certifying Landmarks.
@@ -63,10 +63,10 @@ export const Home: React.FC = () => {
           </Reveal>
 
           <Reveal variant="fade-up" delay={450}>
-            <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pointer-events-auto w-full sm:w-auto">
               <MagneticButton
                 onClick={() => navigate('/portfolio')}
-                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-xs uppercase tracking-widest shadow-xl shadow-amber-900/30 w-full sm:w-auto"
+                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-xs uppercase tracking-widest shadow-xl shadow-amber-900/30 w-full sm:w-auto flex items-center justify-center gap-2 font-mono"
                 strength={20}
               >
                 <span>Explore 48 Projects Register</span>
@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
 
               <MagneticButton
                 onClick={() => navigate('/practice')}
-                className="px-8 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white border border-white/10 font-semibold text-xs uppercase tracking-widest backdrop-blur-md w-full sm:w-auto"
+                className="px-8 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white border border-white/10 font-semibold text-xs uppercase tracking-widest backdrop-blur-md w-full sm:w-auto flex items-center justify-center font-mono"
                 strength={15}
               >
                 Studio Philosophy
